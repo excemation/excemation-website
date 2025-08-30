@@ -31,7 +31,33 @@ Anime Video is a sleek and fully responsive website template designed for stream
 
 <hr/>
 
+## 👀 Website Preview:
+<a href="https://ahmed-maher77.github.io/Anime-Video___Modern-Website-Template/" title="demo">
+  <img src="https://github.com/user-attachments/assets/d41bde70-9597-4770-ace2-e17486c51a5a" alt="website preview - ui mockup" width="400">
+</a>
+
+<hr/>
+
+
 ## 📂 Installation & Usage  
 
 1. **Clone the repository:**  
    git clone https://github.com/Ahmed-Maher77/Anime-Video___Modern-Website-Template.git
+2. **Open it on the browser:**
+   Open the **index.html** file in your browser
+
+
+<hr/>
+
+## 📬 Contact & Contribution
+- 🧑‍💻 **Portfolio:** <a href="https://ahmedmaher-portfolio.vercel.app/" title="See My Portfolio">https://ahmedmaher-portfolio.vercel.app/</a>
+- 🔗 **LinkedIn:** <a href="https://www.linkedin.com/in/ahmed-maher-algohary" title="Contact via LinkedIn">https://www.linkedin.com/in/ahmed-maher-algohary</a>
+- 📧 **Email:** <a href="mailto:ahmedmaher.dev1@gmail.com" title="Contact via Email">ahmedmaher.dev1@gmail.com</a>
+
+> Contributions, suggestions, and bug reports are welcome. Feel free to open issues or pull requests.
+
+---
+
+## ⭐ Support
+
+If you found this project helpful or inspiring, please consider giving it a ⭐. Your support helps me grow and share more open-source projects like this!
