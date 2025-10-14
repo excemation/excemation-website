@@ -2,265 +2,199 @@
 <html lang="sq">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Excemation — Anime në shqip: Naruto, One Piece, Dragon Ball dhe më shumë.">
+  <meta name="keywords" content="anime shqip, naruto shqip, one piece shqip, dragon ball shqip, excemation">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Excemation - Anime në shqip</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Ikonat -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Owl Carousel -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
 
   <style>
     body {
-      margin: 0;
       background-color: #000;
+      color: #fff;
       font-family: 'Mulish', sans-serif;
-      color: white;
     }
 
-    /* ===== NAVBAR ===== */
-    .excemation-header {
-      background-color: #C0C0C0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    /* HEADER */
+    .header {
+      background-color: #a8a8a8;
       padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
     }
 
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-    }
-
-    .nav-logo img {
-      height: 38px;
-      border-radius: 4px;
-      filter: drop-shadow(0 0 1px #000);
-    }
-
-    .nav-logo span {
-      color: white;
-      font-weight: 700;
-      font-size: 18px;
-      letter-spacing: 1px;
-    }
-
-    .nav-menu {
-      display: flex;
-      gap: 28px;
-    }
-
-    .nav-menu a {
-      color: #fff;
-      font-weight: 700;
-      font-size: 14px;
+    .header a, .header li {
+      color: #222 !important;
+      font-weight: 600;
       text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s ease;
+    }
+
+    .header a:hover {
+      color: #000 !important;
+    }
+
+    .header__menu ul {
       display: flex;
-      align-items: center;
-      gap: 6px;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .nav-menu a:hover {
-      color: #000;
-      text-decoration: underline;
+    .header__menu ul li {
+      margin: 0 20px;
     }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .nav-search i {
-      font-size: 18px;
-      color: #fff;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .nav-search i:hover {
-      color: #000;
-    }
-
-    .nav-profile img {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      object-fit: cover;
-    }
-
-    /* ===== HERO SLIDER ===== */
-    .hero {
-      margin-top: 0;
-    }
-
-    .hero__slider .item {
+    /* HERO SECTION */
+    .hero__items {
       position: relative;
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding-left: 80px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+
+    .hero__items img {
+      width: 100%;
       border-radius: 12px;
     }
 
     .hero__text {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px 30px;
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
       border-radius: 10px;
-      max-width: 450px;
+      max-width: 400px;
     }
 
     .hero__text h2 {
-      font-size: 32px;
-      margin: 0 0 10px 0;
       color: #fff;
+      font-size: 32px;
+      font-weight: 700;
     }
 
     .hero__text p {
-      font-size: 15px;
-      margin-bottom: 20px;
       color: #ddd;
+      font-size: 15px;
+      margin-top: 10px;
     }
 
-    .hero__text .btn {
+    .primary-btn {
       display: inline-block;
-      background: #ff2a2a;
-      color: white;
-      text-decoration: none;
+      background: #e50914;
+      color: #fff;
       padding: 10px 20px;
       border-radius: 6px;
-      font-weight: 700;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: 600;
       transition: 0.3s;
     }
 
-    .hero__text .btn:hover {
-      background: #fff;
-      color: #000;
+    .primary-btn:hover {
+      background: #ff4c4c;
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 20px 0;
-      color: #888;
+      padding: 25px 0;
+      color: #aaa;
       font-size: 14px;
       border-top: 1px solid #222;
+      background: linear-gradient(to top, #000 0%, #111 100%);
+      letter-spacing: 0.3px;
     }
 
-    @media (max-width: 768px) {
-      .nav-menu { display: none; }
-      .hero__text { max-width: 90%; padding: 15px; }
-      .hero__text h2 { font-size: 24px; }
+    footer strong {
+      color: #fff;
+      font-weight: 700;
     }
   </style>
 </head>
 
 <body>
-  <!-- ===== NAVBAR ===== -->
-  <header class="excemation-header">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="img/logo.png" alt="Excemation">
-        <span>Excemation</span>
-      </a>
-
-      <nav class="nav-menu">
-        <a href="categories.html"><i class="fa fa-book"></i> Katalogu</a>
-        <a href="new.html"><i class="fa fa-fire"></i> Risitë</a>
-        <a href="series.html"><i class="fa fa-film"></i> Seritë</a>
-        <a href="movies.html"><i class="fa fa-play-circle"></i> Filmat</a>
-        <a href="watchlist.html"><i class="fa fa-eye"></i> Lista ime</a>
-        <a href="blog.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
-      </nav>
-
-      <div class="nav-right">
-        <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
-        <a href="profile.html" class="nav-profile">
-          <img src="img/profile.jpg" alt="Profili">
-        </a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-6">
+          <a href="./index.html"><img src="img/logo.png" alt="Excemation" style="height:40px; border-radius:8px;"> <span style="font-weight:700; color:#222;">Excemation</span></a>
+        </div>
+        <div class="col-lg-8 d-none d-lg-block">
+          <nav class="header__menu">
+            <ul>
+              <li class="active"><a href="./index.html">Katalogu</a></li>
+              <li><a href="./categories.html">Risitë</a></li>
+              <li><a href="./series.html">Seritë</a></li>
+              <li><a href="./films.html">Filmat</a></li>
+              <li><a href="./watchlist.html">Lista ime</a></li>
+              <li><a href="./news.html">Lajme</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-2 col-6 text-end">
+          <span class="icon_search" style="color:#222; margin-right:15px;"></span>
+          <span class="icon_profile" style="color:#222;"></span>
+        </div>
       </div>
     </div>
   </header>
 
-<!-- ===== HERO SLIDER ===== -->
+  <!-- Hero Slider -->
   <section class="hero">
-    <div class="hero__slider owl-carousel">
-
+    <div class="container">
       <!-- Naruto -->
-      <div class="item" style="background-image:url('img/hero/Naruto.jpg');">
+      <div class="hero__items">
+        <img src="img/hero/Naruto.jpg" alt="Naruto">
         <div class="hero__text">
           <h2>Naruto</h2>
           <p>Rruga e një ninje që ëndërron të bëhet Hokage. Dubluar dhe përkthyer me pasion në shqip.</p>
-          <a href="naruto-2002.html" class="btn">Shiko tani</a>
+          <a href="naruto-2002.html" class="primary-btn">Shiko tani</a>
         </div>
       </div>
 
       <!-- One Piece -->
-      <div class="item" style="background-image:url('img/hero/OnePiece.jpg');">
+      <div class="hero__items">
+        <img src="img/hero/OnePiece.jpg" alt="One Piece">
         <div class="hero__text">
           <h2>One Piece</h2>
-          <p>Luffy dhe ekipi Straw Hat në kërkim të thesarit më të madh të botës!</p>
-          <a href="onepiece.html" class="btn">Shiko tani</a>
+          <p>Luffy dhe ekipi Straw Hat në kërkim të thesarit më të madh të botës.</p>
+          <a href="onepiece.html" class="primary-btn">Shiko tani</a>
         </div>
       </div>
 
       <!-- Dragon Ball Daima -->
-      <div class="item" style="background-image:url('img/hero/Daima.jpg');">
+      <div class="hero__items">
+        <img src="img/hero/Daima.jpg" alt="Dragon Ball Daima">
         <div class="hero__text">
           <h2>Dragon Ball Daima</h2>
-          <p>Kthimi i Gokut në një aventurë të re epike, me personazhet si fëmijë!</p>
-          <a href="daima.html" class="btn">Shiko tani</a>
+          <p>Kthimi i Gokut në një aventurë të re epike me personazhet si fëmijë!</p>
+          <a href="daima.html" class="primary-btn">Shiko tani</a>
         </div>
       </div>
-
     </div>
   </section>
 
-
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
+  <!-- Footer -->
   <footer>
-    © <script>document.write(new Date().getFullYear());</script> Excemation — Platformë anime në shqip.
+    © <script>document.write(new Date().getFullYear());</script>
+    <strong>Excemation Productions, LTD.</strong><br>
+    Një platformë dedikuar për transmetimin e animacioneve japoneze në gjuhën shqipe.
   </footer>
 
-  <!-- JS OwlCarousel -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script>
-    $(".hero__slider").owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 4000,
-      autoplayHoverPause: true,
-      nav: false,
-      dots: false,
-      smartSpeed: 800
-    });
-  </script>
+  <!-- JS -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/slicknav.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
