@@ -8,36 +8,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+
   <style>
     body {
       background-color: #000;
       color: #fff;
       font-family: 'Mulish', sans-serif;
     }
+
     .anime-banner {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       padding: 40px 0;
     }
+
     .anime-banner img {
       width: 280px;
       border-radius: 12px;
       margin-right: 40px;
     }
+
     .anime-banner .info {
       max-width: 600px;
     }
+
     .anime-banner h1 {
       font-family: 'Oswald', sans-serif;
       font-size: 42px;
       font-weight: 700;
       margin-bottom: 15px;
+      color: #fff;
     }
+
     .anime-banner p {
-      color: #ccc;
+      color: #fff;
       line-height: 1.6;
     }
+
     .anime-banner .tags span {
       background: #e50914;
       padding: 6px 14px;
@@ -45,10 +53,14 @@
       margin-right: 8px;
       font-size: 13px;
       text-transform: uppercase;
+      color: #fff;
+      font-weight: 600;
     }
+
     .episode-list {
       margin-top: 40px;
     }
+
     .episode {
       display: flex;
       align-items: center;
@@ -57,29 +69,43 @@
       overflow: hidden;
       margin-bottom: 15px;
       transition: 0.3s;
+      cursor: pointer;
     }
-    .episode:hover { transform: scale(1.02); }
+
+    .episode:hover {
+      transform: scale(1.02);
+      background: #1a1a1a;
+    }
+
     .episode img {
       width: 200px;
       height: 110px;
       object-fit: cover;
+      border-right: 2px solid #000;
     }
+
     .episode-info {
       padding: 15px 20px;
+      flex: 1;
     }
+
     .episode-info h3 {
       margin: 0;
       font-family: 'Oswald', sans-serif;
       font-size: 20px;
+      color: #fff;
     }
+
     .episode-info p {
       margin: 5px 0 0;
-      color: #bbb;
+      color: #ccc;
     }
+
     .back-home {
       text-align: center;
       margin: 40px 0;
     }
+
     .back-home a {
       background: #e50914;
       color: #fff;
@@ -88,8 +114,15 @@
       text-decoration: none;
       font-weight: 600;
     }
+
     .back-home a:hover {
       background: #ff3b3b;
+    }
+
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      color: #fff;
     }
   </style>
 </head>
@@ -113,10 +146,10 @@
     </div>
 
     <div class="episode-list">
-      <h2 style="font-family:'Oswald'; margin-bottom:20px;">Sezoni 1 - Episodet</h2>
+      <h2>Sezoni 1 - Episodet</h2>
 
-      <!-- Shembuj episodësh -->
-      <div class="episode" onclick="window.location.href='player.html?ep=1'">
+      <!-- Episodi 1 -->
+      <div class="episode" onclick="window.location.href='anime-watching.html?ep=1'">
         <img src="img/episodes/naruto1.jpg" alt="Episode 1">
         <div class="episode-info">
           <h3>Episodi 1: Fillimi i një udhëtimi</h3>
@@ -124,7 +157,8 @@
         </div>
       </div>
 
-      <div class="episode" onclick="window.location.href='player.html?ep=2'">
+      <!-- Episodi 2 -->
+      <div class="episode" onclick="window.location.href='anime-watching2.html'">
         <img src="img/episodes/naruto2.jpg" alt="Episode 2">
         <div class="episode-info">
           <h3>Episodi 2: Sfida e parë</h3>
@@ -132,15 +166,14 @@
         </div>
       </div>
 
-      <div class="episode" onclick="window.location.href='player.html?ep=3'">
+      <!-- Episodi 3 -->
+      <div class="episode" onclick="window.location.href='anime-watching3.html'">
         <img src="img/episodes/naruto3.jpg" alt="Episode 3">
         <div class="episode-info">
           <h3>Episodi 3: Takimi me Sasuken</h3>
           <p>Naruto dhe Sasuke bëhen rivalë në akademinë ninja.</p>
         </div>
       </div>
-
-      <!-- Mund të shtosh sa të duash -->
     </div>
 
     <div class="back-home">
