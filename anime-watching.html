@@ -1,184 +1,117 @@
-<!DOCTYPE html>
-<html lang="sq">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Shiko Naruto në shqip - të gjitha episodet e dubluara dhe të përkthyera.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naruto - Episodet në shqip | Excemation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Mulish', sans-serif;
-    }
-
-    .anime-banner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 40px 0;
-    }
-
-    .anime-banner img {
-      width: 280px;
-      border-radius: 12px;
-      margin-right: 40px;
-    }
-
-    .anime-banner .info {
-      max-width: 600px;
-    }
-
-    .anime-banner h1 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #fff;
-    }
-
-    .anime-banner p {
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    .anime-banner .tags span {
-      background: #e50914;
-      padding: 6px 14px;
-      border-radius: 6px;
-      margin-right: 8px;
-      font-size: 13px;
-      text-transform: uppercase;
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .episode-list {
-      margin-top: 40px;
-    }
-
-    .episode {
-      display: flex;
-      align-items: center;
-      background: #111;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 15px;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .episode:hover {
-      transform: scale(1.02);
-      background: #1a1a1a;
-    }
-
-    .episode img {
-      width: 200px;
-      height: 110px;
-      object-fit: cover;
-      border-right: 2px solid #000;
-    }
-
-    .episode-info {
-      padding: 15px 20px;
-      flex: 1;
-    }
-
-    .episode-info h3 {
-      margin: 0;
-      font-family: 'Oswald', sans-serif;
-      font-size: 20px;
-      color: #fff;
-    }
-
-    .episode-info p {
-      margin: 5px 0 0;
-      color: #ccc;
-    }
-
-    .back-home {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .back-home a {
-      background: #e50914;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .back-home a:hover {
-      background: #ff3b3b;
-    }
-
-    h2 {
-      font-family: 'Oswald', sans-serif;
-      font-weight: 600;
-      color: #fff;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="anime-banner">
-      <img src="img/hero/Naruto.jpg" alt="Naruto poster">
-      <div class="info">
-        <h1>Naruto</h1>
-        <div class="tags">
-          <span>220 Episode</span>
-          <span>HD 1080p</span>
-          <span>Dubluar</span>
-          <span>Shqip</span>
-        </div>
-        <p>
-          Rruga e një ninje që ëndërron të bëhet Hokage. Ndiq aventurat e Naruto Uzumakit në botën e ninjave, ku miqësia dhe guximi ndryshojnë gjithçka.
-        </p>
-      </div>
+<!-- Header - ADN Style Silver -->
+<header class="excemation-header">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo.png" alt="Excemation" />
+      </a>
     </div>
 
-    <div class="episode-list">
-      <h2>Sezoni 1 - Episodet</h2>
+    <!-- Menu -->
+    <nav class="nav-menu">
+      <a href="categories.html"><i class="fa fa-book"></i> Katalogu</a>
+      <a href="new.html"><i class="fa fa-fire"></i> Risitë</a>
+      <a href="series.html"><i class="fa fa-film"></i> Seritë</a>
+      <a href="movies.html"><i class="fa fa-play-circle"></i> Filmat</a>
+      <a href="watchlist.html"><i class="fa fa-eye"></i> Lista ime</a>
+      <a href="blog.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
+    </nav>
 
-      <!-- Episodi 1 -->
-      <div class="episode" onclick="window.location.href='anime-watching.html?ep=1'">
-        <img src="img/episodes/naruto1.jpg" alt="Episode 1">
-        <div class="episode-info">
-          <h3>Episodi 1: Fillimi i një udhëtimi</h3>
-          <p>Naruto fillon rrugëtimin e tij si ninja në Konoha.</p>
-        </div>
-      </div>
-
-      <!-- Episodi 2 -->
-      <div class="episode" onclick="window.location.href='anime-watching2.html'">
-        <img src="img/episodes/naruto2.jpg" alt="Episode 2">
-        <div class="episode-info">
-          <h3>Episodi 2: Sfida e parë</h3>
-          <p>Naruto përballet me një provë që do të testojë guximin e tij.</p>
-        </div>
-      </div>
-
-      <!-- Episodi 3 -->
-      <div class="episode" onclick="window.location.href='anime-watching3.html'">
-        <img src="img/episodes/naruto3.jpg" alt="Episode 3">
-        <div class="episode-info">
-          <h3>Episodi 3: Takimi me Sasuken</h3>
-          <p>Naruto dhe Sasuke bëhen rivalë në akademinë ninja.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="back-home">
-      <a href="index.html">← Kthehu te Faqja Kryesore</a>
+    <!-- Profile & Search -->
+    <div class="nav-right">
+      <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
+      <a href="profile.html" class="nav-profile">
+        <img src="img/profile.jpg" alt="Profili" />
+      </a>
     </div>
   </div>
-</body>
-</html>
+</header>
+
+<!-- CSS -->
+<style>
+  .excemation-header {
+    background-color: #C0C0C0; /* Argjendi */
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  /* Logo */
+  .nav-logo img {
+    height: 38px;
+    filter: brightness(0) invert(1); /* Logo e bardhë */
+  }
+
+  /* Menu */
+  .nav-menu {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-menu a {
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .nav-menu a i {
+    font-size: 15px;
+  }
+
+  .nav-menu a:hover {
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  /* Profile & Search */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-right .nav-search i {
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .nav-right .nav-search i:hover {
+    color: #fff;
+  }
+
+  .nav-profile img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    object-fit: cover;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  }
+</style>
