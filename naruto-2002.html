@@ -102,7 +102,7 @@
       object-fit: cover;
     }
 
-    /* ===== ANIME INFO ===== */
+    /* ===== ANIME BANNER ===== */
     .anime-banner {
       background: url('img/hero/Naruto.jpg') center/cover no-repeat;
       height: 350px;
@@ -138,29 +138,59 @@
       color: #ccc;
     }
 
-    /* ===== EPISODES ===== */
-    .episodes {
-      max-width: 900px;
-      margin: 40px auto;
+    /* ===== EPISODE GRID STYLE ===== */
+    .episode-gallery {
+      max-width: 1100px;
+      margin: 60px auto;
       padding: 0 20px;
     }
 
-    .episode {
+    .episode-gallery h2 {
+      font-size: 26px;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 20px;
+      border-left: 5px solid #ff2a2a;
+      padding-left: 12px;
+    }
+
+    .episode-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .episode-card {
       background: #111;
       border-radius: 10px;
-      margin-bottom: 15px;
-      padding: 20px;
-      transition: background 0.3s;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .episode:hover {
-      background: #222;
+    .episode-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
-    .episode a {
-      color: #ff4444;
-      font-weight: 700;
-      text-decoration: none;
+    .episode-card img {
+      width: 100%;
+      height: 115px;
+      object-fit: cover;
+    }
+
+    .episode-card p {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      margin: 8px 0;
+      line-height: 1.4;
+    }
+
+    .episode-card span {
+      color: #ccc;
+      font-weight: 400;
+      font-size: 13px;
     }
 
     footer {
@@ -207,17 +237,28 @@
     </div>
   </section>
 
-  <!-- ===== EPISODE LIST ===== -->
-  <section class="episodes">
-    <h2>Sezoni 1 – Episodet</h2>
-    <div class="episode">
-      <strong>Episodi 1:</strong> <a href="anime-watching.html">Naruto fillon rrugëtimin e tij si ninjë</a>
-    </div>
-    <div class="episode">
-      <strong>Episodi 2:</strong> <a href="anime-watching2.html">Emri im është Konohamaru</a>
-    </div>
-    <div class="episode">
-      <strong>Episodi 3:</strong> <a href="anime-watching3.html">Sasuke dhe Sakura – Miq apo armiq?</a>
+  <!-- ===== EPISODE GALLERY ===== -->
+  <section class="episode-gallery">
+    <h2>Episodet</h2>
+    <div class="episode-grid">
+      <div class="episode-card">
+        <a href="anime-watching.html">
+          <img src="img/episodes/naruto-ep1.jpg" alt="Episodi 1">
+          <p>Episodi 1<br><span>Naruto fillon rrugëtimin</span></p>
+        </a>
+      </div>
+      <div class="episode-card">
+        <a href="anime-watching2.html">
+          <img src="img/episodes/naruto-ep2.jpg" alt="Episodi 2">
+          <p>Episodi 2<br><span>Emri im është Konohamaru</span></p>
+        </a>
+      </div>
+      <div class="episode-card">
+        <a href="anime-watching3.html">
+          <img src="img/episodes/naruto-ep3.jpg" alt="Episodi 3">
+          <p>Episodi 3<br><span>Sasuke dhe Sakura</span></p>
+        </a>
+      </div>
     </div>
   </section>
 
