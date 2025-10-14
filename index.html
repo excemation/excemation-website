@@ -1,243 +1,117 @@
-<!DOCTYPE html>
-<html lang="sq">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Excemation — Anime në shqip: Naruto, One Piece, Dragon Ball Daima dhe më shumë.">
-  <meta name="keywords" content="anime shqip, naruto shqip, one piece shqip, dragon ball shqip, excemation">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Excemation - Anime në shqip</title>
-
-  <!-- Fonts & CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-    }
-
-    .header, .footer {
-      background-color: #000 !important;
-    }
-
-    .header__menu ul li a,
-    .footer__nav ul li a {
-      color: #fff !important;
-    }
-
-    .hero {
-      background-color: #000;
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-
-    .hero__slider .hero__items {
-      border-radius: 12px;
-      overflow: hidden;
-      position: relative;
-      min-height: 550px;
-    }
-
-    .hero__items::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.35));
-      z-index: 1;
-    }
-
-    .hero__text {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero__text h2 {
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .hero__text p {
-      color: #ddd;
-    }
-
-    .label {
-      background: #e50914;
-      color: #fff;
-      display: inline-block;
-      padding: 3px 10px;
-      font-size: 14px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-    }
-
-    .primary-btn {
-      background: #e50914;
-      color: #fff !important;
-      padding: 10px 24px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-transform: uppercase;
-      border: none;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .primary-btn:hover {
-      background: #ff3b3b;
-      text-decoration: none;
-    }
-
-    .footer {
-      border-top: 1px solid #222;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    .footer p {
-      color: #888;
-      margin: 0;
-    }
-
-    /* Owl Nav Buttons */
-    .owl-nav button {
-      color: #fff !important;
-      font-size: 40px !important;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: transparent !important;
-      border: none !important;
-      z-index: 10;
-    }
-
-    .owl-nav .owl-prev { left: 10px; }
-    .owl-nav .owl-next { right: 10px; }
-    .owl-dots { display: none; }
-  </style>
-</head>
-
-<body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-2 col-6">
-          <a href="./index.html"><h2><span>Exce</span>mation</h2></a>
-        </div>
-        <div class="col-lg-8 d-none d-lg-block">
-          <nav class="header__menu">
-            <ul>
-              <li class="active"><a href="./index.html">Faqja Kryesore</a></li>
-              <li><a href="./categories.html">Kategoritë</a></li>
-              <li><a href="./blog.html">Blogu</a></li>
-              <li><a href="#">Kontakti</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="col-lg-2 col-6 text-end">
-          <a href="./login.html"><span class="icon_profile"></span></a>
-        </div>
-      </div>
+<!-- Header - ADN Style Silver -->
+<header class="excemation-header">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo.png" alt="Excemation" />
+      </a>
     </div>
-  </header>
 
-  <!-- Hero Slider -->
-  <section class="hero">
-    <div class="hero__slider owl-carousel">
+    <!-- Menu -->
+    <nav class="nav-menu">
+      <a href="categories.html"><i class="fa fa-book"></i> Katalogu</a>
+      <a href="new.html"><i class="fa fa-fire"></i> Risitë</a>
+      <a href="series.html"><i class="fa fa-film"></i> Seritë</a>
+      <a href="movies.html"><i class="fa fa-play-circle"></i> Filmat</a>
+      <a href="watchlist.html"><i class="fa fa-eye"></i> Lista ime</a>
+      <a href="blog.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
+    </nav>
 
-      <!-- Naruto -->
-      <div class="hero__items set-bg" data-setbg="img/hero/Naruto.jpg" onclick="window.location.href='anime-watching.html'" style="cursor:pointer;">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="hero__text">
-                <div class="label">Naruto</div>
-                <h2>Shiko Naruto në shqip</h2>
-                <p>Rruga e një ninje që ndryshoi botën. Dubluar dhe përkthyer me pasion.</p>
-                <a href="./anime-watching.html" class="primary-btn">Shiko episodet <span class="arrow_right"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- One Piece -->
-      <div class="hero__items set-bg" data-setbg="img/hero/OnePiece.jpg" onclick="window.location.href='anime-watching-onepiece.html'" style="cursor:pointer;">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="hero__text">
-                <div class="label">One Piece</div>
-                <h2>Pirateria legjendare</h2>
-                <p>Luffy dhe ekipi Straw Hat në kërkim të thesarit më të madh të botës!</p>
-                <a href="./anime-watching-onepiece.html" class="primary-btn">Shiko episodet <span class="arrow_right"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dragon Ball Daima -->
-      <div class="hero__items set-bg" data-setbg="img/hero/Daima.jpg" onclick="window.location.href='anime-watching-daima.html'" style="cursor:pointer;">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="hero__text">
-                <div class="label">Dragon Ball Daima</div>
-                <h2>Kthimi i Gokut</h2>
-                <p>Një aventurë e re e Gokut dhe shokëve në formën e tyre fëmijë!</p>
-                <a href="./anime-watching-daima.html" class="primary-btn">Shiko episodet <span class="arrow_right"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <!-- Profile & Search -->
+    <div class="nav-right">
+      <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
+      <a href="profile.html" class="nav-profile">
+        <img src="img/profile.jpg" alt="Profili" />
+      </a>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© <script>document.write(new Date().getFullYear());</script> Excemation — Platformë anime në shqip.</p>
-    </div>
-  </footer>
+<!-- CSS -->
+<style>
+  .excemation-header {
+    background-color: #C0C0C0; /* Argjendi */
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 
-  <!-- JS -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/slicknav.min.js"></script>
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
 
-  <script>
-    $('.hero__slider').owlCarousel({
-      loop: true,
-      margin: 0,
-      items: 1,
-      dots: false,
-      nav: true,
-      navText: ["<span class='arrow_left'></span>", "<span class='arrow_right'></span>"],
-      animateOut: 'fadeOut',
-      animateIn: 'fadeIn',
-      smartSpeed: 1200,
-      autoHeight: false,
-      autoplay: true,
-      autoplayTimeout: 6000
-    });
+  /* Logo */
+  .nav-logo img {
+    height: 38px;
+    filter: brightness(0) invert(1); /* Logo e bardhë */
+  }
 
-    // Background image
-    $('.set-bg').each(function () {
-      var bg = $(this).data('setbg');
-      $(this).css('background-image', 'url(' + bg + ')');
-      $(this).css('background-size', 'cover');
-      $(this).css('background-position', 'center');
-    });
-  </script>
-</body>
-</html>
+  /* Menu */
+  .nav-menu {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-menu a {
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .nav-menu a i {
+    font-size: 15px;
+  }
+
+  .nav-menu a:hover {
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  /* Profile & Search */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-right .nav-search i {
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .nav-right .nav-search i:hover {
+    color: #fff;
+  }
+
+  .nav-profile img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    object-fit: cover;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  }
+</style>
