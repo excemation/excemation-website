@@ -107,6 +107,7 @@
       background-position: center;
       opacity: 0;
       animation: fade 18s infinite;
+      transition: opacity 1s ease-in-out;
     }
 
     .slide:nth-child(1) {
@@ -163,6 +164,30 @@
 
     .slide-content a:hover {
       background: #cc0000;
+    }
+
+    /* ===== DOTS ===== */
+    .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dot.active {
+      background: #fff;
     }
 
     /* ===== ANIME TË NJOHURA ===== */
@@ -261,15 +286,15 @@
 
   <!-- SLIDESHOW -->
   <section class="slideshow">
-    <div class="slide">
+    <div class="slide active" style="background-image: url('img/hero/Naruto.jpg');">
       <div class="slide-content">
-        <h1>Naruto (2002)</h1>
+        <h1>Naruto</h1>
         <p>Rruga e një ninje që ëndërron të bëhet Hokage. Ndiq aventurat e Naruto Uzumakit në botën e ninjave.</p>
         <a href="naruto-2002.html">Shiko tani</a>
       </div>
     </div>
 
-    <div class="slide">
+    <div class="slide" style="background-image: url('img/hero/OnePiece.jpg');">
       <div class="slide-content">
         <h1>One Piece</h1>
         <p>Luffy dhe ekipi Straw Hat në kërkim të thesarit legjendar One Piece në një aventurë epike!</p>
@@ -277,12 +302,18 @@
       </div>
     </div>
 
-    <div class="slide">
+    <div class="slide" style="background-image: url('img/hero/Daima.jpg');">
       <div class="slide-content">
         <h1>Dragon Ball Daima</h1>
         <p>Kthimi i Gokut në një aventurë të re epike, me personazhet si fëmijë!</p>
         <a href="#">Shiko tani</a>
       </div>
+    </div>
+
+    <div class="dots">
+      <span class="dot active" onclick="showSlide(0)"></span>
+      <span class="dot" onclick="showSlide(1)"></span>
+      <span class="dot" onclick="showSlide(2)"></span>
     </div>
   </section>
 
@@ -293,7 +324,7 @@
       <div class="anime-card">
         <a href="naruto-2002.html">
           <img src="img/posters/naruto.jpg" alt="Naruto">
-          Naruto (2002)
+          Naruto
         </a>
       </div>
 
@@ -319,5 +350,26 @@
     Një platformë dedikuar për transmetimin e animacioneve japoneze në gjuhën shqipe.
   </footer>
 
+  <!-- SCRIPT -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(n) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = (i === n) ? '1' : '0';
+        dots[i].classList.toggle('active', i === n);
+      });
+      currentSlide = n;
+    }
+
+    function autoSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(autoSlide, 6000);
+  </script>
 </body>
 </html>
