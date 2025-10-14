@@ -97,7 +97,7 @@
       width: 100%;
       height: 430px;
       overflow: hidden;
-      cursor: pointer; /* tregon që figura është e klikueshme */
+      cursor: pointer; /* figura e klikueshme */
     }
 
     .slide {
@@ -361,8 +361,13 @@
     // kalim automatik çdo 6 sekonda
     setInterval(autoSlide, 6000);
 
-    // klik mbi figurë kalon në foton tjetër
-    slideshow.addEventListener('click', nextSlide);
+    // Klik mbi figurë -> kalon sliden, POR lejon klikimet mbi buton/lidhje
+    slideshow.addEventListener('click', (e) => {
+      if (e.target.closest('.slide-content a')) {
+        return; // nëse klikohet butoni, mos e ndërroni sliden
+      }
+      nextSlide();
+    });
   </script>
 
 </body>
