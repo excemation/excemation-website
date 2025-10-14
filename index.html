@@ -63,33 +63,42 @@
     /* GALERI ANIMESH */
     .gallery {
       padding: 50px 0;
+      text-align: center;
     }
     .gallery h3 {
-      text-align: center;
       font-weight: 700;
       font-size: 26px;
       margin-bottom: 30px;
     }
-    .gallery .item {
-      text-align: center;
+    .anime-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+    .anime-item {
+      width: 230px;
       background: #111;
+      border-radius: 10px;
       padding: 10px;
-      border-radius: 8px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .gallery .item img {
+    .anime-item img {
       width: 100%;
-      border-radius: 8px;
-      height: 260px;
+      height: 150px;
       object-fit: cover;
+      border-radius: 8px;
     }
-    .gallery .item h5 {
+    .anime-item h5 {
       margin-top: 10px;
       color: #fff;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 15px;
     }
-    .gallery .item:hover { transform: scale(1.05); }
+    .anime-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #005aff;
+    }
 
     /* FOOTER */
     footer {
@@ -152,27 +161,23 @@
     </div>
   </div>
 
-  <!-- GALERI ANIMESH -->
+  <!-- GALERI ANIMESH (fikse) -->
   <section class="gallery">
-    <div class="container">
-      <h3>Anime të njohura</h3>
-      <div class="owl-carousel owl-theme">
+    <h3>Anime të njohura</h3>
+    <div class="anime-grid">
+      <div class="anime-item">
+        <a href="onepiece.html"><img src="img/hero/OnePiece.jpg" alt="One Piece"></a>
+        <h5>One Piece</h5>
+      </div>
 
-        <div class="item">
-          <a href="naruto-2002.html"><img src="img/hero/Naruto.jpg" alt="Naruto"></a>
-          <h5>Naruto (2002)</h5>
-        </div>
+      <div class="anime-item">
+        <a href="daima.html"><img src="img/hero/Daima.jpg" alt="Dragon Ball Daima"></a>
+        <h5>Dragon Ball Daima</h5>
+      </div>
 
-        <div class="item">
-          <a href="onepiece.html"><img src="img/hero/OnePiece.jpg" alt="One Piece"></a>
-          <h5>One Piece</h5>
-        </div>
-
-        <div class="item">
-          <a href="daima.html"><img src="img/hero/Daima.jpg" alt="Dragon Ball Daima"></a>
-          <h5>Dragon Ball Daima</h5>
-        </div>
-
+      <div class="anime-item">
+        <a href="naruto-2002.html"><img src="img/hero/Naruto.jpg" alt="Naruto"></a>
+        <h5>Naruto (2002)</h5>
       </div>
     </div>
   </section>
@@ -197,19 +202,6 @@
       nav:false,
       dots:true,
       animateOut: 'fadeOut'
-    });
-
-    $(".gallery .owl-carousel").owlCarousel({
-      items:3,
-      margin:15,
-      loop:true,
-      autoplay:true,
-      autoplayTimeout:3500,
-      responsive:{
-        0:{items:1},
-        768:{items:2},
-        1200:{items:3}
-      }
     });
   </script>
 
