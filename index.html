@@ -2,160 +2,127 @@
 <html lang="sq">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Excemation — platformë anime në shqip: episode me titra ose dublim, lista, kategori dhe blog.">
-  <meta name="keywords" content="anime shqip, titra shqip, dublim shqip, excemation, anime online shqip">
+  <meta name="description" content="Excemation — Anime në shqip: Naruto, One Piece, Dragon Ball Daima dhe më shumë.">
+  <meta name="keywords" content="anime shqip, naruto shqip, one piece shqip, dragon ball shqip, excemation">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Excemation - Anime të dubluara në shqip</title>
+  <title>Excemation - Anime në shqip</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-  <link rel="stylesheet" href="css/plyr.css" type="text/css">
-  <link rel="stylesheet" href="css/nice-select.css" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <style>
+    body { background-color: #000; color: #fff; }
+    .hero__text h2, .hero__text p { color: #fff; }
+    .hero__items::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
+      z-index: 1;
+      border-radius: 12px;
+    }
+    .hero__items .hero__text { position: relative; z-index: 2; }
+  </style>
 </head>
 
 <body>
-  <!-- Page Loader -->
-  <div id="preloder"><div class="loader"></div></div>
-
   <!-- Header -->
   <header class="header">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-2">
-          <div class="header__logo">
-            <a href="./index.html" class="logo">
-              <h2><span>Exce</span>mation</h2>
-            </a>
-          </div>
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-6">
+          <a href="./index.html"><h2><span>Exce</span>mation</h2></a>
         </div>
-        <div class="col-lg-8">
-          <div class="header__nav">
-            <nav class="header__menu mobile-menu">
-              <ul>
-                <li class="active"><a href="./index.html">Faqja Kryesore</a></li>
-                <li><a href="./categories.html">Kategoritë <span class="arrow_carrot-down"></span></a>
-                  <ul class="dropdown">
-                    <li><a href="./categories.html">Kategoritë</a></li>
-                    <li><a href="./anime-details.html">Detajet e Animes</a></li>
-                    <li><a href="./anime-watching.html">Shiko Episodin</a></li>
-                    <li><a href="./blog-details.html">Përshkrimi</a></li>
-                    <li><a href="./signup.html">Regjistrohu</a></li>
-                    <li><a href="./login.html">Hyr</a></li>
-                  </ul>
-                </li>
-                <li><a href="./blog.html">Blogu</a></li>
-                <li><a href="#">Kontakti</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="header__right">
-            <a href="#" class="search-switch"><span class="icon_search"></span></a>
-            <a href="./login.html"><span class="icon_profile"></span></a>
-          </div>
-        </div>
-      </div>
-      <div id="mobile-menu-wrap"></div>
-    </div>
-  </header>
-  <!-- Header End -->
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero__slider owl-carousel">
-
-        <!-- SLIDE 1 - Naruto -->
-        <div class="hero__items set-bg" data-setbg="img/hero/Naruto.jpg" onclick="window.location.href='anime-watching.html'" style="cursor:pointer;">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="hero__text">
-                <div class="label">Naruto</div>
-                <h2>Shiko Naruto në shqip</h2>
-                <p>Episode të dubluara me cilësi të lartë për fansat e Excemation.</p>
-                <a href="./anime-watching.html"><span>Shiko episodet</span> <i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SLIDE 2 - Kategoritë -->
-        <div class="hero__items set-bg" data-setbg="img/hero/hero-2.jpg">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="hero__text">
-                <div class="label">Aventurë</div>
-                <h2>Seritë më të njohura të momentit</h2>
-                <p>Eksploro koleksionin e plotë të Excemation.</p>
-                <a href="./categories.html"><span>Zbulo më shumë</span> <i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- Hero End -->
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="page-up">
-      <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="footer__logo">
-            <a href="./index.html"><h3><span>Exce</span>mation</h3></a>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="footer__nav">
+        <div class="col-lg-8 d-none d-lg-block">
+          <nav class="header__menu">
             <ul>
               <li class="active"><a href="./index.html">Faqja Kryesore</a></li>
               <li><a href="./categories.html">Kategoritë</a></li>
               <li><a href="./blog.html">Blogu</a></li>
               <li><a href="#">Kontakti</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
-        <div class="col-lg-3">
-          <p>© <script>document.write(new Date().getFullYear());</script> Excemation — Platformë e animeve në shqip.</p>
+        <div class="col-lg-2 col-6 text-end">
+          <a href="./login.html"><span class="icon_profile"></span></a>
         </div>
       </div>
     </div>
-  </footer>
+  </header>
 
-  <!-- Search -->
-  <div class="search-model">
-    <div class="h-100 d-flex align-items-center justify-content-center">
-      <div class="search-close-switch"><i class="icon_close"></i></div>
-      <form class="search-model-form">
-        <input type="text" id="search-input" placeholder="Kërko këtu...">
-      </form>
+  <!-- Hero Slider -->
+  <section class="hero" style="background-color:#000;">
+    <div class="hero__slider owl-carousel">
+
+      <!-- Naruto -->
+      <div class="hero__items set-bg" data-setbg="img/hero/Naruto.jpg" onclick="window.location.href='anime-watching.html'" style="cursor:pointer; border-radius:12px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero__text">
+                <div class="label">Naruto</div>
+                <h2>Shiko Naruto në shqip</h2>
+                <p>Rruga e një ninje që ndryshoi botën. Dubluar dhe përkthyer me pasion.</p>
+                <a href="./anime-watching.html" class="primary-btn">Shiko episodet <span class="arrow_right"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- One Piece -->
+      <div class="hero__items set-bg" data-setbg="img/hero/OnePiece.jpg" onclick="window.location.href='anime-watching-onepiece.html'" style="cursor:pointer; border-radius:12px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero__text">
+                <div class="label">One Piece</div>
+                <h2>Pirateria legjendare</h2>
+                <p>Luffy dhe ekipi Straw Hat në kërkim të thesarit më të madh të botës!</p>
+                <a href="./anime-watching-onepiece.html" class="primary-btn">Shiko episodet <span class="arrow_right"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dragon Ball Daima -->
+      <div class="hero__items set-bg" data-setbg="img/hero/Daima.jpg" onclick="window.location.href='anime-watching-daima.html'" style="cursor:pointer; border-radius:12px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero__text">
+                <div class="label">Dragon Ball Daima</div>
+                <h2>Kthimi i Gokut</h2>
+                <p>Një aventurë e re e Gokut dhe shokëve në formën e tyre fëmijë!</p>
+                <a href="./anime-watching-daima.html" class="primary-btn">Shiko episodet <span class="arrow_right"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="background:#000; border-top:1px solid #222;">
+    <div class="container text-center">
+      <p style="color:#888; margin:20px 0;">© <script>document.write(new Date().getFullYear());</script> Excemation — Platformë anime në shqip.</p>
+    </div>
+  </footer>
 
   <!-- JS -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/player.js"></script>
-  <script src="js/jquery.nice-select.min.js"></script>
-  <script src="js/mixitup.min.js"></script>
-  <script src="js/jquery.slicknav.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="js/slicknav.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
