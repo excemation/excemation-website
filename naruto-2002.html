@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naruto – Episodet në shqip | Excemation</title>
+  <title>Naruto (2002) – Episodet në shqip | Excemation</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,8 +18,8 @@
 
     /* ===== HEADER ===== */
     .excemation-header {
-      background-color: #C0C0C0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      background-color: #9e9e9e;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       padding: 10px 0;
       position: sticky;
       top: 0;
@@ -45,7 +45,6 @@
     .nav-logo img {
       height: 38px;
       border-radius: 4px;
-      filter: drop-shadow(0 0 1px #000);
     }
 
     .nav-logo span {
@@ -87,11 +86,6 @@
       font-size: 18px;
       color: #fff;
       cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .nav-search i:hover {
-      color: #000;
     }
 
     .nav-profile img {
@@ -99,13 +93,12 @@
       height: 36px;
       border-radius: 50%;
       border: 2px solid #fff;
-      object-fit: cover;
     }
 
-    /* ===== ANIME BANNER ===== */
+    /* ===== HERO BANNER ===== */
     .anime-banner {
       background: url('img/hero/Naruto.jpg') center/cover no-repeat;
-      height: 350px;
+      height: 360px;
       display: flex;
       align-items: center;
       padding: 50px;
@@ -127,7 +120,7 @@
     }
 
     .anime-banner h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin: 0;
       color: #fff;
     }
@@ -136,9 +129,10 @@
       font-size: 16px;
       margin-top: 10px;
       color: #ccc;
+      line-height: 1.6;
     }
 
-    /* ===== EPISODE GRID STYLE ===== */
+    /* ===== EPISODE GRID ===== */
     .episode-gallery {
       max-width: 1100px;
       margin: 60px auto;
@@ -175,7 +169,7 @@
 
     .episode-card img {
       width: 100%;
-      height: 125px;
+      height: 130px;
       object-fit: cover;
     }
 
@@ -183,7 +177,6 @@
       color: #fff;
       font-size: 15px;
       font-weight: 700;
-      text-decoration: none;
       margin: 10px 0 5px 0;
     }
 
@@ -217,7 +210,7 @@
 </head>
 
 <body>
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER -->
   <header class="excemation-header">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
@@ -226,12 +219,12 @@
       </a>
 
       <nav class="nav-menu">
-        <a href="categories.html"><i class="fa fa-book"></i> Katalogu</a>
-        <a href="new.html"><i class="fa fa-fire"></i> Risitë</a>
-        <a href="series.html"><i class="fa fa-film"></i> Seritë</a>
-        <a href="movies.html"><i class="fa fa-play-circle"></i> Filmat</a>
-        <a href="watchlist.html"><i class="fa fa-eye"></i> Lista ime</a>
-        <a href="blog.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
+        <a href="categories.html"><i class="fa fa-book"></i> KATALOGU</a>
+        <a href="new.html"><i class="fa fa-fire"></i> RISITË</a>
+        <a href="series.html"><i class="fa fa-film"></i> SERITË</a>
+        <a href="movies.html"><i class="fa fa-play-circle"></i> FILMAT</a>
+        <a href="watchlist.html"><i class="fa fa-eye"></i> LISTA IME</a>
+        <a href="blog.html"><i class="fa fa-newspaper-o"></i> LAJME</a>
       </nav>
 
       <div class="nav-right">
@@ -243,25 +236,27 @@
     </div>
   </header>
 
-  <!-- ===== ANIME BANNER ===== -->
+  <!-- HERO BANNER -->
   <section class="anime-banner">
     <div class="text">
-      <h1>Naruto</h1>
-      <p>Rruga e një ninje që ëndërron të bëhet Hokage. Ndiq aventurat e Naruto Uzumakit dhe miqve të tij në botën e ninjave.</p>
+      <h1>Naruto (2002)</h1>
+      <p>Rruga e një ninje që ëndërron të bëhet Hokage. Ndiq aventurat e Naruto Uzumakit dhe miqve të tij në botën e ninjave, në këtë seri të dashur për miliona fansa në mbarë botën.</p>
     </div>
   </section>
 
-  <!-- ===== EPISODE GALLERY ===== -->
+  <!-- EPISODES -->
   <section class="episode-gallery">
     <h2>Episodet</h2>
     <div class="episode-grid">
+
       <div class="episode-card">
         <a href="video.html?anime=naruto&ep=1">
           <img src="img/episodes/naruto-ep1.jpg" alt="Episodi 1">
           <p>Episodi 1</p>
-          <span>Po Vjen Naruto</span>
+          <span>Po vjen Naruto</span>
         </a>
       </div>
+
       <div class="episode-card">
         <a href="video.html?anime=naruto&ep=2">
           <img src="img/episodes/naruto-ep2.jpg" alt="Episodi 2">
@@ -269,19 +264,29 @@
           <span>Konohamaru</span>
         </a>
       </div>
+
       <div class="episode-card">
         <a href="video.html?anime=naruto&ep=3">
           <img src="img/episodes/naruto-ep3.jpg" alt="Episodi 3">
           <p>Episodi 3</p>
-          <span>Armiq ?</span>
+          <span>Armiq?</span>
         </a>
       </div>
+
+      <div class="episode-card">
+        <a href="video.html?anime=naruto&ep=4">
+          <img src="img/episodes/naruto-ep4.jpg" alt="Episodi 4">
+          <p>Episodi 4</p>
+          <span>Ura e Hirusenit</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
-    © <script>document.write(new Date().getFullYear());</script> 
+    © <script>document.write(new Date().getFullYear());</script>
     <strong>Excemation Productions, LTD.</strong><br>
     Një platformë dedikuar për transmetimin e animacioneve japoneze në gjuhën shqipe.
   </footer>
