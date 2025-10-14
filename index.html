@@ -1,123 +1,174 @@
-<!-- Header - ADN Style Silver -->
-<header class="excemation-header">
-  <div class="nav-container">
-    <!-- Logo -->
-    <div class="nav-left">
-      <a href="index.html" class="nav-logo">
-        <img src="img/logo.png" alt="Excemation">
-      </a>
-    </div>
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excemation - Anime në shqip</title>
 
-    <!-- Menu -->
-    <nav class="nav-menu">
-      <a href="categories.html"><i class="fa fa-book"></i> KATALOGU</a>
-      <a href="new.html"><i class="fa fa-fire"></i> RISITË</a>
-      <a href="series.html"><i class="fa fa-film"></i> SERITË</a>
-      <a href="movies.html"><i class="fa fa-play-circle"></i> FILMAT</a>
-      <a href="watchlist.html"><i class="fa fa-eye"></i> LISTA IME</a>
-      <a href="blog.html"><i class="fa fa-newspaper-o"></i> LAJME</a>
-    </nav>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Search + Profile -->
-    <div class="nav-right">
-      <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
-      <a href="profile.html" class="nav-profile">
-        <img src="img/profile.jpg" alt="Profili">
-      </a>
-    </div>
-  </div>
-</header>
+  <!-- Ikonat -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- CSS -->
-<style>
-  .excemation-header {
-    background-color: #C0C0C0; /* Argjendi */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* Logo */
-  .nav-logo img {
-    height: 40px;
-    filter: drop-shadow(0 0 1px #000);
-  }
-
-  /* Menu */
-  .nav-menu {
-    display: flex;
-    gap: 25px;
-  }
-
-  .nav-menu a {
-    color: white;
-    font-family: 'Mulish', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .nav-menu a i {
-    font-size: 15px;
-  }
-
-  .nav-menu a:hover {
-    color: #000;
-    text-decoration: underline;
-  }
-
-  /* Search + Profile */
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .nav-search i {
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-
-  .nav-search i:hover {
-    color: #000;
-  }
-
-  .nav-profile img {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    transition: transform 0.2s ease;
-  }
-
-  .nav-profile img:hover {
-    transform: scale(1.05);
-  }
-
-  /* Mobile responsive */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
+  <style>
+    /* ======= HEADER STILI ADN (ARGJENDI) ======= */
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Mulish', sans-serif;
     }
-  }
-</style>
+
+    .excemation-header {
+      background-color: #C0C0C0; /* Argjendi */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* LOGO */
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+      border-radius: 4px;
+      filter: drop-shadow(0 0 1px #000);
+    }
+
+    .nav-logo span {
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    /* MENU */
+    .nav-menu {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-menu a i {
+      font-size: 15px;
+    }
+
+    .nav-menu a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    /* Djathtas (Search + Profil) */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-search i {
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .nav-search i:hover {
+      color: #000;
+    }
+
+    .nav-profile img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease;
+    }
+
+    .nav-profile img:hover {
+      transform: scale(1.05);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="excemation-header">
+    <div class="nav-container">
+      <!-- LOGO -->
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo">
+          <img src="img/logo.png" alt="Excemation">
+          <span>Excemation</span>
+        </a>
+      </div>
+
+      <!-- MENU -->
+      <nav class="nav-menu">
+        <a href="categories.html"><i class="fa fa-book"></i> Katalogu</a>
+        <a href="new.html"><i class="fa fa-fire"></i> Risitë</a>
+        <a href="series.html"><i class="fa fa-film"></i> Seritë</a>
+        <a href="movies.html"><i class="fa fa-play-circle"></i> Filmat</a>
+        <a href="watchlist.html"><i class="fa fa-eye"></i> Lista ime</a>
+        <a href="blog.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
+      </nav>
+
+      <!-- SEARCH + PROFILE -->
+      <div class="nav-right">
+        <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
+        <a href="profile.html" class="nav-profile">
+          <img src="img/profile.jpg" alt="Profili">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SHEMBULL FAQE ===== -->
+  <section style="padding:50px; text-align:center; color:white;">
+    <h1>Mirë se erdhe në Excemation</h1>
+    <p>Shiko anime të dubluara në shqip — Naruto, One Piece, Dragon Ball Daima dhe më shumë.</p>
+  </section>
+
+</body>
+</html>
