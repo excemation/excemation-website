@@ -4,25 +4,25 @@
     <!-- Logo -->
     <div class="nav-left">
       <a href="index.html" class="nav-logo">
-        <img src="img/logo.png" alt="Excemation" />
+        <img src="img/logo.png" alt="Excemation">
       </a>
     </div>
 
     <!-- Menu -->
     <nav class="nav-menu">
-      <a href="categories.html"><i class="fa fa-book"></i> Katalogu</a>
-      <a href="new.html"><i class="fa fa-fire"></i> Risitë</a>
-      <a href="series.html"><i class="fa fa-film"></i> Seritë</a>
-      <a href="movies.html"><i class="fa fa-play-circle"></i> Filmat</a>
-      <a href="watchlist.html"><i class="fa fa-eye"></i> Lista ime</a>
-      <a href="blog.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
+      <a href="categories.html"><i class="fa fa-book"></i> KATALOGU</a>
+      <a href="new.html"><i class="fa fa-fire"></i> RISITË</a>
+      <a href="series.html"><i class="fa fa-film"></i> SERITË</a>
+      <a href="movies.html"><i class="fa fa-play-circle"></i> FILMAT</a>
+      <a href="watchlist.html"><i class="fa fa-eye"></i> LISTA IME</a>
+      <a href="blog.html"><i class="fa fa-newspaper-o"></i> LAJME</a>
     </nav>
 
-    <!-- Profile & Search -->
+    <!-- Search + Profile -->
     <div class="nav-right">
       <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
       <a href="profile.html" class="nav-profile">
-        <img src="img/profile.jpg" alt="Profili" />
+        <img src="img/profile.jpg" alt="Profili">
       </a>
     </div>
   </div>
@@ -32,45 +32,45 @@
 <style>
   .excemation-header {
     background-color: #C0C0C0; /* Argjendi */
-    padding: 8px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    padding: 10px 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
   }
 
   .nav-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 25px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    align-items: center;
   }
 
   /* Logo */
   .nav-logo img {
-    height: 38px;
-    filter: brightness(0) invert(1); /* Logo e bardhë */
+    height: 40px;
+    filter: drop-shadow(0 0 1px #000);
   }
 
   /* Menu */
   .nav-menu {
     display: flex;
-    gap: 24px;
+    gap: 25px;
   }
 
   .nav-menu a {
-    color: #000;
+    color: white;
+    font-family: 'Mulish', sans-serif;
     font-weight: 700;
+    font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: 'Mulish', sans-serif;
-    font-size: 14px;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 6px;
-    transition: all 0.2s ease;
   }
 
   .nav-menu a i {
@@ -78,37 +78,43 @@
   }
 
   .nav-menu a:hover {
-    color: #fff;
-    transform: translateY(-1px);
+    color: #000;
+    text-decoration: underline;
   }
 
-  /* Profile & Search */
+  /* Search + Profile */
   .nav-right {
     display: flex;
     align-items: center;
     gap: 15px;
   }
 
-  .nav-right .nav-search i {
+  .nav-search i {
     font-size: 18px;
-    color: #000;
+    color: white;
     cursor: pointer;
-    transition: 0.2s;
+    transition: color 0.3s;
   }
 
-  .nav-right .nav-search i:hover {
-    color: #fff;
+  .nav-search i:hover {
+    color: #000;
   }
 
   .nav-profile img {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    border: 2px solid #000;
     object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
   }
 
-  /* Mobile */
+  .nav-profile img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Mobile responsive */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
