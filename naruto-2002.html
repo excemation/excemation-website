@@ -156,8 +156,8 @@
 
     .episode-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 25px;
     }
 
     .episode-card {
@@ -165,32 +165,37 @@
       border-radius: 10px;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
     }
 
     .episode-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
     }
 
     .episode-card img {
       width: 100%;
-      height: 115px;
+      height: 125px;
       object-fit: cover;
     }
 
     .episode-card p {
       color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-      margin: 8px 0;
-      line-height: 1.4;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 10px 0 5px 0;
     }
 
     .episode-card span {
-      color: #ccc;
+      color: #aaa;
       font-weight: 400;
       font-size: 13px;
+    }
+
+    .episode-card a {
+      text-decoration: none;
+      color: inherit;
     }
 
     footer {
@@ -198,6 +203,7 @@
       padding: 20px;
       color: #888;
       border-top: 1px solid #222;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -244,19 +250,22 @@
       <div class="episode-card">
         <a href="anime-watching.html">
           <img src="img/episodes/naruto-ep1.jpg" alt="Episodi 1">
-          <p>Episodi 1<br><span>Naruto fillon rrugëtimin</span></p>
+          <p>Episodi 1</p>
+          <span>Naruto fillon rrugëtimin</span>
         </a>
       </div>
       <div class="episode-card">
         <a href="anime-watching2.html">
           <img src="img/episodes/naruto-ep2.jpg" alt="Episodi 2">
-          <p>Episodi 2<br><span>Emri im është Konohamaru</span></p>
+          <p>Episodi 2</p>
+          <span>Emri im është Konohamaru</span>
         </a>
       </div>
       <div class="episode-card">
         <a href="anime-watching3.html">
           <img src="img/episodes/naruto-ep3.jpg" alt="Episodi 3">
-          <p>Episodi 3<br><span>Sasuke dhe Sakura</span></p>
+          <p>Episodi 3</p>
+          <span>Sasuke dhe Sakura</span>
         </a>
       </div>
     </div>
