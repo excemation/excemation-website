@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiko Anime - Excemation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Mulish', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #c0c0c0, #a0a0a0);
+      padding: 12px 0;
+      color: #000;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    iframe {
+      width: 80%;
+      height: 480px;
+      margin-top: 25px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .controls {
+      margin-top: 25px;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 10px 22px;
+      background-color: #e50914;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    a.btn:hover {
+      background-color: #ff4040;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 13px;
+      padding: 20px 0;
+      border-top: 1px solid #222;
+      letter-spacing: 0.3px;
+    }
+
+    footer strong { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>🎬 Excemation | Shiko Anime</header>
+
+  <!-- VIDEO -->
+  <h2 id="anime-title">Ngarkohet videoja...</h2>
+  <iframe id="video-frame" src="" allowfullscreen></iframe>
+
+  <div class="controls">
+    <a href="#" id="prev-btn" class="btn">⬅ Episodi i mëparshëm</a>
+    <a href="#" id="next-btn" class="btn">Episodi tjetër ➡</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © <script>document.write(new Date().getFullYear());</script>
+    <strong>Excemation Productions, LTD.</strong><br>
+    Një platformë dedikuar për transmetimin e animacioneve japoneze në gjuhën shqipe.
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // marrim parametrat nga URL, p.sh. ?anime=naruto&ep=1
+    const urlParams = new URLSearchParams(window.location.search);
+    const anime = urlParams.get('anime');
+    const ep = parseInt(urlParams.get('ep')) || 1;
+
+    // shembull liste videosh (vendos ID-të e tua të YouTube)
+    const videos = {
+      naruto: [
+        "AxYqV1FfXqk", // episodi 1
+        "ZqK_7yG5_9w", // episodi 2
+        "BtTeJxZZd6Y"  // episodi 3
+      ],
+      onepiece: [
+        "abcdefghijk", "lmnopqrstuv", "wxyz123456"
+      ],
+      daima: [
+        "ZY2Tpj_Cp9E", "Ax1h2i3j4k5", "Lp90qwerTY"
+      ]
+    };
+
+    const titleElement = document.getElementById("anime-title");
+    const frame = document.getElementById("video-frame");
+
+    if (anime && videos[anime]) {
+      titleElement.textContent = anime.charAt(0).toUpperCase() + anime.slice(1) + " - Episodi " + ep;
+      const videoId = videos[anime][ep - 1];
+      if (videoId) frame.src = "https://www.youtube.com/embed/" + videoId;
+      else frame.src = "";
+    } else {
+      titleElement.textContent = "Videoja nuk u gjet!";
+    }
+
+    // butonët next / prev
+    document.getElementById("next-btn").href = `video.html?anime=${anime}&ep=${ep + 1}`;
+    document.getElementById("prev-btn").href = `video.html?anime=${anime}&ep=${ep - 1 > 0 ? ep - 1 : 1}`;
+  </script>
+
+</body>
+</html>
