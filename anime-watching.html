@@ -24,7 +24,7 @@
   <!-- Preloader -->
   <div id="preloder"><div class="loader"></div></div>
 
-  <!-- Header (i njëjtë me index) -->
+  <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="row">
@@ -78,9 +78,8 @@
             <span>“Shembull demonstrues për Excemation”</span>
           </div>
 
-          <!-- Variant A: YouTube Embed (Rekomandohet) -->
+          <!-- YouTube Embed -->
           <div class="anime__video__player" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
-            <!-- ZËVENDËSO VIDEO_ID me ID-në e YouTube-it që ke të drejtë ta përdorësh -->
             <iframe
               src="https://www.youtube.com/embed/OCjwRlJvEfQ"
               title="Naruto - Episodi 1 (Dublim Shqip)"
@@ -88,16 +87,7 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
               style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-
           </div>
-
-          <!-- Variant B: HTML5 Video (nëse ke të drejta & file-in tënd) -->
-          <!--
-          <video controls playsinline style="width:100%;margin-top:16px;border-radius:8px;">
-            <source src="videos/naruto-ep01.mp4" type="video/mp4">
-            Shfletuesi juaj nuk e suporton video player-in HTML5.
-          </video>
-          -->
 
           <!-- Episode Controls -->
           <div class="anime__details__btn mt-3">
@@ -105,14 +95,13 @@
             <div class="watch-btn">
               <a href="./anime-watching2.html"><span>Në episodin 2</span> <i class="fa fa-angle-right"></i></a>
             </div>
-
           </div>
 
           <!-- Description -->
           <div class="anime__details__text">
             <p>
               *Kjo është një faqe demonstrative për Excemation.*  
-              Zëvendëso `VIDEO_ID` me një video **zyrtare/ligjore** (ose ngarko videon tënde të licencuar).
+              Zëvendëso <code>VIDEO_ID</code> me një video zyrtare/ligjore (ose ngarko videon tënde të licencuar).
               Ne nuk ofrojmë apo lidhim përmbajtje që shkel të drejtat e autorit.
             </p>
           </div>
@@ -124,19 +113,12 @@
             <div class="section-title">
               <h5>Episode të tjerë</h5>
             </div>
-            <ul class="list-group">
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="./anime-watching.html">Episodi 1</a>
-                <span class="badge badge-primary badge-pill">Shikuar</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="./anime-watching.html?ep=2">Episodi 2</a>
-                <span class="badge badge-secondary badge-pill">Së shpejti</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="./anime-watching.html?ep=3">Episodi 3</a>
-                <span class="badge badge-secondary badge-pill">Së shpejti</span>
-              </li>
+
+            <!-- *** LISTA E NJËJTË SI TE EPISODI 2/3 *** -->
+            <ul class="list-unstyled pl-3">
+              <li class="mb-2"><a href="./anime-watching.html">Episodi 1</a></li>
+              <li class="mb-2"><a href="./anime-watching2.html">Episodi 2</a></li>
+              <li class="mb-2"><a href="./anime-watching3.html">Episodi 3</a></li>
             </ul>
 
             <div class="section-title" style="margin-top:24px;">
