@@ -3,87 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shiko Anime - Excemation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+  <title>Shiko Episodin | Excemation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
     body {
+      margin: 0;
       background-color: #000;
       color: #fff;
       font-family: 'Mulish', sans-serif;
-      margin: 0;
-      padding: 0;
+    }
+
+    /* ===== HEADER ===== */
+    .excemation-header {
+      background-color: #9e9e9e;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 38px;
+      border-radius: 4px;
+    }
+
+    .nav-logo span {
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-menu a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-search i {
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .nav-profile img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    /* ===== VIDEO SECTION ===== */
+    .video-container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
       text-align: center;
     }
 
-    header {
-      background: linear-gradient(to bottom, #c0c0c0, #a0a0a0);
-      padding: 12px 0;
-      color: #000;
-      font-weight: 600;
-      font-size: 18px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    .video-container h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #fff;
     }
 
-    h2 {
-      margin-top: 30px;
-      font-size: 24px;
+    .video-container video {
+      width: 100%;
+      max-height: 560px;
+      border-radius: 10px;
+      background: #111;
+      outline: none;
+    }
+
+    .video-details {
+      text-align: left;
+      margin-top: 25px;
+      line-height: 1.6;
+    }
+
+    .video-details h2 {
+      font-size: 20px;
+      color: #ff2a2a;
+    }
+
+    .video-details p {
+      color: #bbb;
+      font-size: 15px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background: #ff2a2a;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      background: #e02020;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      color: #aaa;
+      font-size: 14px;
+      border-top: 1px solid #222;
+      background-color: #000;
+      letter-spacing: 0.3px;
+      margin-top: 50px;
+    }
+
+    footer strong {
+      color: #fff;
       font-weight: 700;
     }
-
-    iframe {
-      width: 80%;
-      height: 480px;
-      margin-top: 25px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-
-    .controls {
-      margin-top: 25px;
-    }
-
-    a.btn {
-      display: inline-block;
-      margin: 5px 10px;
-      padding: 10px 22px;
-      background-color: #e50914;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    a.btn:hover {
-      background-color: #ff4040;
-    }
-
-    footer {
-      margin-top: 40px;
-      color: #aaa;
-      font-size: 13px;
-      padding: 20px 0;
-      border-top: 1px solid #222;
-      letter-spacing: 0.3px;
-    }
-
-    footer strong { color: #fff; }
   </style>
 </head>
+
 <body>
-
   <!-- HEADER -->
-  <header>🎬 Excemation | Shiko Anime</header>
+  <header class="excemation-header">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo.png" alt="Excemation">
+        <span>Excemation</span>
+      </a>
 
-  <!-- VIDEO -->
-  <h2 id="anime-title">Ngarkohet videoja...</h2>
-  <iframe id="video-frame" src="" allowfullscreen></iframe>
+      <nav class="nav-menu">
+        <a href="categories.html"><i class="fa fa-book"></i> KATALOGU</a>
+        <a href="new.html"><i class="fa fa-fire"></i> RISITË</a>
+        <a href="series.html"><i class="fa fa-film"></i> SERITË</a>
+        <a href="movies.html"><i class="fa fa-play-circle"></i> FILMAT</a>
+        <a href="watchlist.html"><i class="fa fa-eye"></i> LISTA IME</a>
+        <a href="blog.html"><i class="fa fa-newspaper-o"></i> LAJME</a>
+      </nav>
 
-  <div class="controls">
-    <a href="#" id="prev-btn" class="btn">⬅ Episodi i mëparshëm</a>
-    <a href="#" id="next-btn" class="btn">Episodi tjetër ➡</a>
-  </div>
+      <div class="nav-right">
+        <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
+        <a href="profile.html" class="nav-profile">
+          <img src="img/profile.jpg" alt="Profili">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- VIDEO PLAYER -->
+  <section class="video-container">
+    <h1 id="video-title">Ngarkohet episodi...</h1>
+
+    <!-- Vendos videon këtu -->
+    <video id="anime-video" controls poster="img/loading.jpg">
+      <source id="video-source" src="" type="video/mp4">
+      Shfletuesi juaj nuk e mbështet videon.
+    </video>
+
+    <div class="video-details">
+      <h2 id="anime-name"></h2>
+      <p id="anime-description"></p>
+    </div>
+
+    <a href="naruto-2002.html" class="back-link">← Kthehu te episodet</a>
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -92,44 +220,35 @@
     Një platformë dedikuar për transmetimin e animacioneve japoneze në gjuhën shqipe.
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- SCRIPT për titullin dhe videon -->
   <script>
-    // marrim parametrat nga URL, p.sh. ?anime=naruto&ep=1
-    const urlParams = new URLSearchParams(window.location.search);
-    const anime = urlParams.get('anime');
-    const ep = parseInt(urlParams.get('ep')) || 1;
+    const params = new URLSearchParams(window.location.search);
+    const anime = params.get("anime");
+    const ep = params.get("ep");
 
-    // shembull liste videosh (vendos ID-të e tua të YouTube)
-    const videos = {
-      naruto: [
-        "AxYqV1FfXqk", // episodi 1
-        "ZqK_7yG5_9w", // episodi 2
-        "BtTeJxZZd6Y"  // episodi 3
-      ],
-      onepiece: [
-        "abcdefghijk", "lmnopqrstuv", "wxyz123456"
-      ],
-      daima: [
-        "ZY2Tpj_Cp9E", "Ax1h2i3j4k5", "Lp90qwerTY"
-      ]
-    };
+    const title = document.getElementById("video-title");
+    const name = document.getElementById("anime-name");
+    const desc = document.getElementById("anime-description");
+    const videoSrc = document.getElementById("video-source");
+    const videoEl = document.getElementById("anime-video");
 
-    const titleElement = document.getElementById("anime-title");
-    const frame = document.getElementById("video-frame");
+    if (anime && ep) {
+      // Shembull: për Naruto
+      if (anime === "naruto") {
+        title.textContent = `Naruto – Episodi ${ep}`;
+        name.textContent = "Naruto (2002)";
+        desc.textContent = "Naruto Uzumaki, një ninja i ri që ëndërron të bëhet Hokage, nis rrugëtimin e tij me shumë sfida.";
 
-    if (anime && videos[anime]) {
-      titleElement.textContent = anime.charAt(0).toUpperCase() + anime.slice(1) + " - Episodi " + ep;
-      const videoId = videos[anime][ep - 1];
-      if (videoId) frame.src = "https://www.youtube.com/embed/" + videoId;
-      else frame.src = "";
+        // Ndrysho këtë rrugë sipas mënyrës që ruan videot
+        videoSrc.src = `videos/naruto-ep${ep}.mp4`;
+      }
+
+      videoEl.load();
     } else {
-      titleElement.textContent = "Videoja nuk u gjet!";
+      title.textContent = "Nuk u gjet episodi!";
+      name.textContent = "";
+      desc.textContent = "";
     }
-
-    // butonët next / prev
-    document.getElementById("next-btn").href = `video.html?anime=${anime}&ep=${ep + 1}`;
-    document.getElementById("prev-btn").href = `video.html?anime=${anime}&ep=${ep - 1 > 0 ? ep - 1 : 1}`;
   </script>
-
 </body>
 </html>
