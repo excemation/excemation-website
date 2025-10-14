@@ -11,16 +11,20 @@
   <!-- Ikonat -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
   <style>
-    /* ======= HEADER STILI ADN (ARGJENDI) ======= */
     body {
       margin: 0;
       background-color: #000;
       font-family: 'Mulish', sans-serif;
+      color: white;
     }
 
+    /* ===== NAVBAR ===== */
     .excemation-header {
-      background-color: #C0C0C0; /* Argjendi */
+      background-color: #C0C0C0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.25);
       padding: 10px 0;
       position: sticky;
@@ -37,12 +41,6 @@
       align-items: center;
     }
 
-    /* LOGO */
-    .nav-left {
-      display: flex;
-      align-items: center;
-    }
-
     .nav-logo {
       display: flex;
       align-items: center;
@@ -51,8 +49,7 @@
     }
 
     .nav-logo img {
-      height: 40px;
-      width: auto;
+      height: 38px;
       border-radius: 4px;
       filter: drop-shadow(0 0 1px #000);
     }
@@ -64,7 +61,6 @@
       letter-spacing: 1px;
     }
 
-    /* MENU */
     .nav-menu {
       display: flex;
       gap: 28px;
@@ -82,16 +78,11 @@
       gap: 6px;
     }
 
-    .nav-menu a i {
-      font-size: 15px;
-    }
-
     .nav-menu a:hover {
       color: #000;
       text-decoration: underline;
     }
 
-    /* Djathtas (Search + Profil) */
     .nav-right {
       display: flex;
       align-items: center;
@@ -113,38 +104,88 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      object-fit: cover;
       border: 2px solid #fff;
-      box-shadow: 0 0 5px rgba(0,0,0,0.5);
-      transition: transform 0.2s ease;
+      object-fit: cover;
     }
 
-    .nav-profile img:hover {
-      transform: scale(1.05);
+    /* ===== HERO SLIDER ===== */
+    .hero {
+      margin-top: 0;
     }
 
-    /* MOBILE */
+    .hero__slider .item {
+      position: relative;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 80px;
+      border-radius: 12px;
+    }
+
+    .hero__text {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 30px;
+      border-radius: 10px;
+      max-width: 450px;
+    }
+
+    .hero__text h2 {
+      font-size: 32px;
+      margin: 0 0 10px 0;
+      color: #fff;
+    }
+
+    .hero__text p {
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .hero__text .btn {
+      display: inline-block;
+      background: #ff2a2a;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .hero__text .btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #888;
+      font-size: 14px;
+      border-top: 1px solid #222;
+    }
+
     @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-      }
+      .nav-menu { display: none; }
+      .hero__text { max-width: 90%; padding: 15px; }
+      .hero__text h2 { font-size: 24px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- ===== HEADER ===== -->
+  <!-- ===== NAVBAR ===== -->
   <header class="excemation-header">
     <div class="nav-container">
-      <!-- LOGO -->
-      <div class="nav-left">
-        <a href="index.html" class="nav-logo">
-          <img src="img/logo.png" alt="Excemation">
-          <span>Excemation</span>
-        </a>
-      </div>
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo.png" alt="Excemation">
+        <span>Excemation</span>
+      </a>
 
-      <!-- MENU -->
       <nav class="nav-menu">
         <a href="categories.html"><i class="fa fa-book"></i> Katalogu</a>
         <a href="new.html"><i class="fa fa-fire"></i> Risitë</a>
@@ -154,7 +195,6 @@
         <a href="blog.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
       </nav>
 
-      <!-- SEARCH + PROFILE -->
       <div class="nav-right">
         <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
         <a href="profile.html" class="nav-profile">
@@ -164,11 +204,59 @@
     </div>
   </header>
 
-  <!-- ===== SHEMBULL FAQE ===== -->
-  <section style="padding:50px; text-align:center; color:white;">
-    <h1>Mirë se erdhe në Excemation</h1>
-    <p>Shiko anime të dubluara në shqip — Naruto, One Piece, Dragon Ball Daima dhe më shumë.</p>
+  <!-- ===== HERO SLIDER ===== -->
+  <section class="hero">
+    <div class="hero__slider owl-carousel">
+
+      <!-- Naruto -->
+      <div class="item" style="background-image:url('img/hero/Naruto.jpg');">
+        <div class="hero__text">
+          <h2>Naruto</h2>
+          <p>Rruga e një ninje që ëndërron të bëhet Hokage. Dubluar dhe përkthyer me pasion në shqip.</p>
+          <a href="anime-watching.html" class="btn">Shiko tani</a>
+        </div>
+      </div>
+
+      <!-- One Piece -->
+      <div class="item" style="background-image:url('img/hero/OnePiece.jpg');">
+        <div class="hero__text">
+          <h2>One Piece</h2>
+          <p>Luffy dhe ekipi Straw Hat në kërkim të thesarit më të madh të botës!</p>
+          <a href="anime-watching-onepiece.html" class="btn">Shiko tani</a>
+        </div>
+      </div>
+
+      <!-- Dragon Ball Daima -->
+      <div class="item" style="background-image:url('img/hero/Daima.jpg');">
+        <div class="hero__text">
+          <h2>Dragon Ball Daima</h2>
+          <p>Kthimi i Gokut në një aventurë të re epike, me personazhet si fëmijë!</p>
+          <a href="anime-watching-daima.html" class="btn">Shiko tani</a>
+        </div>
+      </div>
+
+    </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © <script>document.write(new Date().getFullYear());</script> Excemation — Platformë anime në shqip.
+  </footer>
+
+  <!-- JS OwlCarousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(".hero__slider").owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      nav: false,
+      dots: false,
+      smartSpeed: 800
+    });
+  </script>
 </body>
 </html>
