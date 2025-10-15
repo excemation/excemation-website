@@ -5,298 +5,274 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Naruto – Episodet në shqip | Excemation</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & Ikona -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Mulish', sans-serif;
+    :root{
+      --gray:#808080;
+      --black:#000;
+      --white:#fff;
+      --muted:#bdbdbd;
+      --accent:#ff2a2a;
+      --accent-hover:#cc0000;
+      --border:#222;
+      --card:#111;
+      --container:1160px;
     }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--black);
+      color:var(--white);
+      font-family:'Poppins',sans-serif;
+    }
+    a{text-decoration:none;color:inherit}
 
     /* ===== HEADER ===== */
-    .excemation-header {
-      background-color: #9e9e9e;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+    header{
+      background:var(--gray);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:10px 24px;
+      position:sticky;top:0;z-index:1000;
+      box-shadow:0 2px 6px rgba(0,0,0,.3);
     }
+    .header__inner{max-width:var(--container);margin:auto;display:flex;align-items:center;gap:24px;width:100%}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:36px;border-radius:4px}
+    .logo span{font-weight:700;font-size:18px;color:#fff}
+    nav{display:flex;gap:22px;flex-wrap:wrap}
+    nav a{display:flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:#fff;opacity:.95}
+    nav a:hover{color:#000}
+    .header__right{margin-left:auto;display:flex;align-items:center;gap:14px}
+    .icon-btn{background:transparent;border:0;color:#fff;font-size:18px;cursor:pointer}
+    .avatar{width:36px;height:36px;border-radius:50%;border:2px solid #fff;object-fit:cover}
 
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* ===== Search & Profile ===== */
+    .searchbar{display:none;width:100%;background:#0f0f0f;border-top:1px solid var(--border)}
+    .searchbar__inner{max-width:var(--container);margin:auto;padding:12px 24px;display:flex;gap:10px}
+    .searchbar input{flex:1;background:#1a1a1a;border:1px solid var(--border);color:#fff;padding:10px 12px;border-radius:8px;font-size:14px}
+    .searchbar button{background:var(--accent);border:0;color:#fff;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    .searchbar button:hover{background:var(--accent-hover)}
+    .profile-dropdown{
+      position:absolute;right:24px;top:64px;background:#0f0f0f;border:1px solid var(--border);
+      border-radius:10px;min-width:220px;display:none;z-index:1001;
+      box-shadow:0 10px 30px rgba(0,0,0,.5)
     }
+    .profile-dropdown__header{display:flex;align-items:center;gap:10px;padding:14px;border-bottom:1px solid var(--border)}
+    .profile-dropdown__header img{width:36px;height:36px;border-radius:50%}
+    .profile-dropdown a{display:block;padding:12px 14px;color:#ddd}
+    .profile-dropdown a:hover{background:#1a1a1a}
 
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
+    /* ===== Banner ===== */
+    .banner{
+      position:relative;
+      height:430px;
+      background:url('img/hero/Naruto.jpg') center/cover no-repeat;
+      display:flex;align-items:flex-end;
     }
+    .banner::after{
+      content:'';position:absolute;inset:0;background:rgba(0,0,0,0.65);
+    }
+    .banner__content{
+      position:relative;z-index:1;
+      padding:60px 24px;
+      max-width:var(--container);
+      margin:auto;
+    }
+    .banner__content h1{font-size:clamp(26px,4vw,42px);margin-bottom:10px}
+    .banner__content p{max-width:620px;color:#ccc;font-size:15px;line-height:1.6}
+    .banner__btn{
+      margin-top:16px;display:inline-block;
+      background:var(--accent);padding:10px 18px;border-radius:8px;font-weight:700
+    }
+    .banner__btn:hover{background:var(--accent-hover)}
 
-    .nav-logo img {
-      height: 38px;
-      border-radius: 4px;
+    /* ===== Episodet ===== */
+    .section{max-width:var(--container);margin:60px auto;padding:0 24px}
+    .section__title{font-size:26px;font-weight:700;border-left:5px solid var(--accent);padding-left:12px;margin-bottom:22px}
+    .episodes{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+    .episode{
+      background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--border);
+      transition:transform .25s, box-shadow .25s;text-align:center
     }
+    .episode:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(255,255,255,.08)}
+    .episode img{width:100%;height:130px;object-fit:cover}
+    .episode__body{padding:12px}
+    .episode__title{font-weight:700}
+    .episode__muted{color:var(--muted);font-size:13px;margin-top:2px}
 
-    .nav-logo span {
-      color: white;
-      font-weight: 700;
-      font-size: 18px;
-      letter-spacing: 1px;
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--border);padding:22px 16px;text-align:center;color:#aaa;margin-top:60px
     }
-
-    .nav-menu {
-      display: flex;
-      gap: 28px;
-    }
-
-    .nav-menu a {
-      color: #fff;
-      font-weight: 700;
-      font-size: 14px;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .nav-menu a:hover {
-      color: #000;
-      text-decoration: underline;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .nav-search i {
-      font-size: 18px;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    .nav-profile img {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-    }
-
-    /* ===== HERO BANNER ===== */
-    .anime-banner {
-      background: url('img/hero/Naruto.jpg') center/cover no-repeat;
-      height: 360px;
-      display: flex;
-      align-items: center;
-      padding: 50px;
-      position: relative;
-    }
-
-    .anime-banner::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-    }
-
-    .anime-banner .text {
-      position: relative;
-      z-index: 1;
-      max-width: 600px;
-    }
-
-    .anime-banner h1 {
-      font-size: 42px;
-      margin: 0;
-      color: #fff;
-    }
-
-    .anime-banner p {
-      font-size: 16px;
-      margin-top: 10px;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    /* ===== EPISODE GRID ===== */
-    .episode-gallery {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .episode-gallery h2 {
-      font-size: 26px;
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 20px;
-      border-left: 5px solid #ff2a2a;
-      padding-left: 12px;
-    }
-
-    .episode-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 25px;
-    }
-
-    .episode-card {
-      background: #111;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
-
-    .episode-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-    }
-
-    .episode-card img {
-      width: 100%;
-      height: 130px;
-      object-fit: cover;
-    }
-
-    .episode-card p {
-      color: #fff;
-      font-size: 15px;
-      font-weight: 700;
-      margin: 10px 0 5px 0;
-    }
-
-    .episode-card span {
-      color: #aaa;
-      font-weight: 400;
-      font-size: 13px;
-    }
-
-    .episode-card a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      text-align: center;
-      padding: 25px 0;
-      color: #aaa;
-      font-size: 14px;
-      border-top: 1px solid #222;
-      background-color: #000;
-      letter-spacing: 0.3px;
-    }
-
-    footer strong {
-      color: #fff;
-      font-weight: 700;
-    }
+    footer strong{color:#fff}
   </style>
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header class="excemation-header">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header__inner">
+      <a class="logo" href="index.html">
         <img src="img/logo.png" alt="Excemation">
         <span>Excemation</span>
       </a>
 
-      <nav class="nav-menu">
-        <a href="categories.html"><i class="fa fa-book"></i> KATALOGU</a>
-        <a href="new.html"><i class="fa fa-fire"></i> RISITË</a>
-        <a href="series.html"><i class="fa fa-film"></i> SERITË</a>
-        <a href="movies.html"><i class="fa fa-play-circle"></i> FILMAT</a>
-        <a href="watchlist.html"><i class="fa fa-eye"></i> LISTA IME</a>
-        <a href="blog.html"><i class="fa fa-newspaper-o"></i> LAJME</a>
+      <nav>
+        <a href="katalogu.html"><i class="fa fa-book"></i> Katalogu</a>
+        <a href="risite.html"><i class="fa fa-fire"></i> Risitë</a>
+        <a href="serite.html"><i class="fa fa-film"></i> Seritë</a>
+        <a href="filmat.html"><i class="fa fa-play-circle"></i> Filmat</a>
+        <a href="lista-ime.html"><i class="fa fa-eye"></i> Lista ime</a>
+        <a href="lajme.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
       </nav>
 
-      <div class="nav-right">
-        <a href="#" class="nav-search"><i class="fa fa-search"></i></a>
-        <a href="profile.html" class="nav-profile">
-          <img src="img/profile.jpg" alt="Profili">
-        </a>
+      <div class="header__right">
+        <button class="icon-btn" id="searchToggle"><i class="fa fa-search"></i></button>
+        <button class="icon-btn" id="profileToggle"><i class="fa fa-user-circle"></i></button>
+        <img class="avatar" src="img/profile.jpg" alt="Profili">
       </div>
     </div>
   </header>
 
-  <!-- HERO BANNER -->
-  <section class="anime-banner">
-    <div class="text">
+  <!-- Searchbar -->
+  <div class="searchbar" id="searchbar">
+    <div class="searchbar__inner">
+      <input id="searchInput" type="search" placeholder="Kërko anime...">
+      <button id="searchGo">Kërko</button>
+    </div>
+  </div>
+
+  <!-- Profile dropdown -->
+  <div class="profile-dropdown" id="profileDropdown">
+    <div class="profile-dropdown__header">
+      <img src="img/profile.jpg" alt="">
+      <div>
+        <div style="font-weight:700">Përdoruesi</div>
+        <div style="font-size:12px;color:#aaa">excemation@example.com</div>
+      </div>
+    </div>
+    <a href="profile.html"><i class="fa fa-id-badge"></i> Shiko profilin</a>
+    <a href="lista-ime.html"><i class="fa fa-bookmark"></i> Lista ime</a>
+    <a href="#"><i class="fa fa-sign-out"></i> Dil</a>
+  </div>
+
+  <!-- ===== Banner ===== -->
+  <section class="banner">
+    <div class="banner__content">
       <h1>Naruto</h1>
-      <p>Rruga e një ninje që ëndërron të bëhet Hokage. Ndiq aventurat e Naruto Uzumakit dhe miqve të tij në botën e ninjave, në këtë seri të dashur për miliona fansa në mbarë botën.</p>
+      <p>
+        Rruga e një ninje që ëndërron të bëhet Hokage.  
+        Në fshatin Konoha, Naruto Uzumaki përballet me sfida, miqësi dhe armiq që e formojnë drejt heroit që do bëhet.  
+        Tani mund ta shikosh në shqip — me përkthim të kujdesshëm dhe dublim origjinal.
+      </p>
+      <a class="banner__btn" href="video.html"><i class="fa fa-play"></i> Shiko Episodin 1</a>
     </div>
   </section>
 
-  <!-- EPISODES -->
-  <section class="episode-gallery">
-    <h2>Episodet</h2>
-    <div class="episode-grid">
+  <!-- ===== Episodet ===== -->
+  <section class="section">
+    <h2 class="section__title">Episodet</h2>
+    <div class="episodes">
+      <a class="episode" href="video.html?ep=1">
+        <img src="img/episodes/naruto-ep1.jpg" alt="Episodi 1">
+        <div class="episode__body">
+          <div class="episode__title">Episodi 1</div>
+          <div class="episode__muted">Po vjen Naruto!</div>
+        </div>
+      </a>
 
-      <div class="episode-card">
-        <a href="video.html?anime=naruto&ep=1">
-          <img src="img/episodes/naruto-ep1.jpg" alt="Episodi 1">
-          <p>Episodi 1</p>
-          <span>Po vjen Naruto</span>
-        </a>
-      </div>
+      <a class="episode" href="video.html?ep=2">
+        <img src="img/episodes/naruto-ep2.jpg" alt="Episodi 2">
+        <div class="episode__body">
+          <div class="episode__title">Episodi 2</div>
+          <div class="episode__muted">Treni i parë</div>
+        </div>
+      </a>
 
-      <div class="episode-card">
-        <a href="video.html?anime=naruto&ep=2">
-          <img src="img/episodes/naruto-ep2.jpg" alt="Episodi 2">
-          <p>Episodi 2</p>
-          <span>Konohamaru</span>
-        </a>
-      </div>
+      <a class="episode" href="video.html?ep=3">
+        <img src="img/episodes/naruto-ep3.jpg" alt="Episodi 3">
+        <div class="episode__body">
+          <div class="episode__title">Episodi 3</div>
+          <div class="episode__muted">Armiq të rinj</div>
+        </div>
+      </a>
 
-      <div class="episode-card">
-        <a href="video.html?anime=naruto&ep=3">
-          <img src="img/episodes/naruto-ep3.jpg" alt="Episodi 3">
-          <p>Episodi 3</p>
-          <span>Armiq?</span>
-        </a>
-      </div>
+      <a class="episode" href="video.html?ep=4">
+        <img src="img/episodes/naruto-ep4.jpg" alt="Episodi 4">
+        <div class="episode__body">
+          <div class="episode__title">Episodi 4</div>
+          <div class="episode__muted">Mësuesi Kakashi</div>
+        </div>
+      </a>
 
-      <div class="episode-card">
-        <a href="video.html?anime=naruto&ep=4">
-          <img src="img/episodes/naruto-ep4.jpg" alt="Episodi 4">
-          <p>Episodi 4</p>
-          <span>Stërvitje Mbijetese</span>
-        </a>
-      </div>
-      
-       <div class="episode-card">
-        <a href="video.html?anime=naruto&ep=5">
-          <img src="img/episodes/naruto-ep5.jpg" alt="Episodi 5">
-          <p>Episodi 5</p>
-          <span>Të Skualifikuar ?!</span>
-        </a>
-      </div>
-    
+      <a class="episode" href="video.html?ep=5">
+        <img src="img/episodes/naruto-ep5.jpg" alt="Episodi 5">
+        <div class="episode__body">
+          <div class="episode__title">Episodi 5</div>
+          <div class="episode__muted">Testi i ekipit 7</div>
+        </div>
+      </a>
+
+      <a class="episode" href="video.html?ep=6">
+        <img src="img/episodes/naruto-ep6.jpg" alt="Episodi 6">
+        <div class="episode__body">
+          <div class="episode__title">Episodi 6</div>
+          <div class="episode__muted">Një mision i rrezikshëm</div>
+        </div>
+      </a>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer>
-    © <script>document.write(new Date().getFullYear());</script>
-    <strong>Excemation Productions, LTD.</strong><br>
+    © 2025 <strong>Excemation Productions, LTD.</strong><br>
     Një platformë dedikuar për transmetimin e animacioneve japoneze në gjuhën shqipe.
   </footer>
+
+  <script>
+    /* ===== Search ===== */
+    const searchToggle = document.getElementById('searchToggle');
+    const searchbar = document.getElementById('searchbar');
+    const searchInput = document.getElementById('searchInput');
+    const searchGo = document.getElementById('searchGo');
+
+    searchToggle.addEventListener('click',()=>{
+      const open=searchbar.style.display==='block';
+      searchbar.style.display=open?'none':'block';
+      if(!open)setTimeout(()=>searchInput.focus(),10);
+    });
+
+    function handleSearch(){
+      const q=(searchInput.value||'').toLowerCase().trim();
+      if(!q)return;
+      if(q.includes('naruto'))location.href='naruto-2002.html';
+      else if(q.includes('piece')||q.includes('one'))location.href='piratetevegjel.html';
+      else if(q.includes('daima')||q.includes('dragon'))location.href='sferatedragoitdaima.html';
+      else if(q.includes('kuroko'))location.href='basketbollikurokos.html';
+      else if(q.includes('heidi'))location.href='haidi-vajzaealpeve.html';
+      else location.href='katalogu.html';
+    }
+    searchGo.addEventListener('click',handleSearch);
+    searchInput.addEventListener('keydown',e=>{if(e.key==='Enter')handleSearch();});
+
+    /* ===== Profile ===== */
+    const profileToggle=document.getElementById('profileToggle');
+    const profileDropdown=document.getElementById('profileDropdown');
+    profileToggle.addEventListener('click',()=>{
+      profileDropdown.style.display=(profileDropdown.style.display==='block')?'none':'block';
+    });
+    document.addEventListener('click',e=>{
+      if(!profileDropdown.contains(e.target)&&!profileToggle.contains(e.target)){
+        profileDropdown.style.display='none';
+      }
+    });
+  </script>
 </body>
 </html>
