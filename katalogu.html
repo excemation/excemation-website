@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalogu - Excemation</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: #9c9c9c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 36px;
+      border-radius: 4px;
+    }
+
+    .logo span {
+      font-weight: 700;
+      font-size: 18px;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .profile-section i {
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .profile-section i:hover {
+      color: #000;
+    }
+
+    .profile-section img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid white;
+      object-fit: cover;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    main {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      border-left: 5px solid #ff2a2a;
+      padding-left: 12px;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    /* ===== ANIME GRID ===== */
+    .anime-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .anime-card {
+      background-color: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .anime-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+    }
+
+    .anime-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .anime-card a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      padding: 12px 0;
+      transition: color 0.3s ease;
+    }
+
+    .anime-card a:hover {
+      color: #ffcc00;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 14px;
+      border-top: 1px solid #222;
+      letter-spacing: 0.3px;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Excemation Logo">
+      <span>Excemation</span>
+    </div>
+
+    <nav>
+      <a href="katalogu.html"><i class="fa fa-book"></i> Katalogu</a>
+      <a href="risite.html"><i class="fa fa-fire"></i> Risitë</a>
+      <a href="serite.html"><i class="fa fa-film"></i> Seritë</a>
+      <a href="filmat.html"><i class="fa fa-play-circle"></i> Filmat</a>
+      <a href="lista-ime.html"><i class="fa fa-eye"></i> Lista ime</a>
+      <a href="lajme.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
+    </nav>
+
+    <div class="profile-section">
+      <i class="fa fa-search"></i>
+      <img src="img/profile.jpg" alt="Profili">
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <h1>Katalogu i Animeve</h1>
+    <p>Këtu do të gjeni të gjitha seritë e disponueshme në Excemation – nga klasiket deri te prodhimet më të reja japoneze.</p>
+
+    <div class="anime-grid">
+      <div class="anime-card">
+        <a href="naruto-2002.html">
+          <img src="img/posters/naruto.jpg" alt="Naruto">
+          Naruto
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="#">
+          <img src="img/posters/onepiece.jpg" alt="One Piece">
+          One Piece
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="#">
+          <img src="img/posters/dragonball-daima.jpg" alt="Dragon Ball Daima">
+          Dragon Ball Daima
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="#">
+          <img src="img/posters/bleach.jpg" alt="Bleach">
+          Bleach
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="#">
+          <img src="img/posters/demonslayer.jpg" alt="Demon Slayer">
+          Demon Slayer
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="#">
+          <img src="img/posters/attackontitan.jpg" alt="Attack on Titan">
+          Attack on Titan
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 <strong>Excemation Productions, LTD.</strong><br>
+    Një platformë dedikuar për transmetimin e animacioneve japoneze në gjuhën shqipe.
+  </footer>
+
+</body>
+</html>
 
