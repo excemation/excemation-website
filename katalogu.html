@@ -3,227 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katalogu - Excemation</title>
+  <title>Katalogu | Excemation</title>
 
-  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
+    :root{
+      --gray:#808080;
+      --black:#000;
+      --white:#fff;
+      --muted:#bdbdbd;
+      --accent:#ff2a2a;
+      --accent-hover:#cc0000;
+      --border:#222;
+      --card:#111;
+      --container:1160px;
     }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--black);color:var(--white);font-family:'Poppins',sans-serif;}
+    a{text-decoration:none;color:inherit}
 
     /* ===== HEADER ===== */
-    header {
-      background-color: #9c9c9c;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    }
+    header{background:var(--gray);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 24px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,.3);}
+    .header__inner{max-width:var(--container);margin:auto;display:flex;align-items:center;gap:24px;width:100%}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:36px;border-radius:4px}
+    .logo span{font-weight:700;font-size:18px;color:#fff}
+    nav{display:flex;gap:22px;flex-wrap:wrap}
+    nav a{display:flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:#fff;opacity:.95}
+    nav a:hover{color:#000}
+    .header__right{margin-left:auto;display:flex;align-items:center;gap:14px}
+    .icon-btn{background:transparent;border:0;color:#fff;font-size:18px;cursor:pointer}
+    .avatar{width:36px;height:36px;border-radius:50%;border:2px solid #fff;object-fit:cover}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    /* ===== Search & Profile ===== */
+    .searchbar{display:none;width:100%;background:#0f0f0f;border-top:1px solid var(--border)}
+    .searchbar__inner{max-width:var(--container);margin:auto;padding:12px 24px;display:flex;gap:10px}
+    .searchbar input{flex:1;background:#1a1a1a;border:1px solid var(--border);color:#fff;padding:10px 12px;border-radius:8px;font-size:14px}
+    .searchbar button{background:var(--accent);border:0;color:#fff;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    .searchbar button:hover{background:var(--accent-hover)}
+    .profile-dropdown{position:absolute;right:24px;top:64px;background:#0f0f0f;border:1px solid var(--border);border-radius:10px;min-width:220px;display:none;z-index:1001;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+    .profile-dropdown__header{display:flex;align-items:center;gap:10px;padding:14px;border-bottom:1px solid var(--border)}
+    .profile-dropdown__header img{width:36px;height:36px;border-radius:50%}
+    .profile-dropdown a{display:block;padding:12px 14px;color:#ddd}
+    .profile-dropdown a:hover{background:#1a1a1a}
 
-    .logo img {
-      height: 36px;
-      border-radius: 4px;
-    }
-
-    .logo span {
-      font-weight: 700;
-      font-size: 18px;
-      color: white;
-    }
-
-    nav {
-      display: flex;
-      gap: 25px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #000;
-    }
-
-    .profile-section {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .profile-section i {
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .profile-section i:hover {
-      color: #000;
-    }
-
-    .profile-section img {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 2px solid white;
-      object-fit: cover;
-    }
-
-    /* ===== MAIN CONTENT ===== */
-    main {
-      max-width: 1100px;
-      margin: 70px auto;
-      padding: 0 20px;
-    }
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 10px;
-      border-left: 5px solid #ff2a2a;
-      padding-left: 12px;
-    }
-
-    p {
-      color: #ccc;
-      margin-bottom: 40px;
-    }
-
-    /* ===== ANIME GRID ===== */
-    .anime-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-      gap: 25px;
-    }
-
-    .anime-card {
-      background-color: #111;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .anime-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-    }
-
-    .anime-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .anime-card a {
-      display: block;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 700;
-      padding: 12px 0;
-      transition: color 0.3s ease;
-    }
-
-    .anime-card a:hover {
-      color: #ffcc00;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background-color: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 25px 10px;
-      font-size: 14px;
-      border-top: 1px solid #222;
-      letter-spacing: 0.3px;
-    }
-
-    footer strong {
-      color: #fff;
-    }
+    /* ===== KATALOG ===== */
+    .section{max-width:var(--container);margin:60px auto;padding:0 24px}
+    .section__title{font-size:26px;font-weight:700;border-left:5px solid var(--accent);padding-left:12px;margin-bottom:22px}
+    .anime-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+    .anime-card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .3s,box-shadow .3s;text-align:center}
+    .anime-card:hover{transform:scale(1.05);box-shadow:0 0 20px rgba(255,255,255,.2)}
+    .anime-card img{width:100%;height:280px;object-fit:cover}
+    .anime-card p{font-weight:700;margin:10px 0 5px}
+    .anime-card span{color:var(--muted);font-size:13px}
+    footer{border-top:1px solid var(--border);padding:22px 16px;text-align:center;color:#aaa;margin-top:60px}
+    footer strong{color:#fff}
   </style>
 </head>
-
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER -->
   <header>
-    <div class="logo">
-      <img src="img/logo.png" alt="Excemation Logo">
-      <span>Excemation</span>
-    </div>
+    <div class="header__inner">
+      <a class="logo" href="index.html">
+        <img src="img/logo.png" alt="Excemation">
+        <span>Excemation</span>
+      </a>
 
-    <nav>
-      <a href="katalogu.html"><i class="fa fa-book"></i> Katalogu</a>
-      <a href="risite.html"><i class="fa fa-fire"></i> Risitë</a>
-      <a href="serite.html"><i class="fa fa-film"></i> Seritë</a>
-      <a href="filmat.html"><i class="fa fa-play-circle"></i> Filmat</a>
-      <a href="lista-ime.html"><i class="fa fa-eye"></i> Lista ime</a>
-      <a href="lajme.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
-    </nav>
+      <nav>
+        <a href="katalogu.html"><i class="fa fa-book"></i> Katalogu</a>
+        <a href="risite.html"><i class="fa fa-fire"></i> Risitë</a>
+        <a href="serite.html"><i class="fa fa-film"></i> Seritë</a>
+        <a href="filmat.html"><i class="fa fa-play-circle"></i> Filmat</a>
+        <a href="lista-ime.html"><i class="fa fa-eye"></i> Lista ime</a>
+        <a href="lajme.html"><i class="fa fa-newspaper-o"></i> Lajme</a>
+      </nav>
 
-    <div class="profile-section">
-      <i class="fa fa-search"></i>
-      <img src="img/profile.jpg" alt="Profili">
+      <div class="header__right">
+        <button class="icon-btn" id="searchToggle"><i class="fa fa-search"></i></button>
+        <button class="icon-btn" id="profileToggle"><i class="fa fa-user-circle"></i></button>
+        <img class="avatar" src="img/profile.jpg" alt="Profili">
+      </div>
     </div>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
-    <h1>Katalogu i Animeve</h1>
-    <p>Këtu do të gjeni të gjitha seritë e disponueshme në Excemation – nga klasiket deri te prodhimet më të reja japoneze.</p>
+  <!-- Searchbar -->
+  <div class="searchbar" id="searchbar">
+    <div class="searchbar__inner">
+      <input id="searchInput" type="search" placeholder="Kërko anime...">
+      <button id="searchGo">Kërko</button>
+    </div>
+  </div>
 
+  <!-- Profile dropdown -->
+  <div class="profile-dropdown" id="profileDropdown">
+    <div class="profile-dropdown__header">
+      <img src="img/profile.jpg" alt="">
+      <div>
+        <div style="font-weight:700">Përdoruesi</div>
+        <div style="font-size:12px;color:#aaa">excemation@example.com</div>
+      </div>
+    </div>
+    <a href="profile.html"><i class="fa fa-id-badge"></i> Shiko profilin</a>
+    <a href="lista-ime.html"><i class="fa fa-bookmark"></i> Lista ime</a>
+    <a href="#"><i class="fa fa-sign-out"></i> Dil</a>
+  </div>
+
+  <!-- KATALOGU -->
+  <section class="section">
+    <h2 class="section__title">Katalogu i animeve</h2>
     <div class="anime-grid">
-      <div class="anime-card">
-        <a href="naruto-2002.html">
-          <img src="img/posters/naruto.jpg" alt="Naruto">
-          Naruto
-        </a>
-      </div>
+      <a href="naruto-2002.html" class="anime-card">
+        <img src="img/posters/naruto.jpg" alt="Naruto">
+        <p>Naruto</p><span>Veprim, Ninjë</span>
+      </a>
 
-      <div class="anime-card">
-        <a href="#">
-          <img src="img/posters/onepiece.jpg" alt="One Piece">
-          One Piece
-        </a>
-      </div>
+      <a href="piratetevegjel.html" class="anime-card">
+        <img src="img/posters/onepiece.jpg" alt="One Piece">
+        <p>One Piece</p><span>Aventurë, Piratë</span>
+      </a>
 
-      <div class="anime-card">
-        <a href="#">
-          <img src="img/posters/dragonball-daima.jpg" alt="Dragon Ball Daima">
-          Dragon Ball Daima
-        </a>
-      </div>
-  </main>
+      <a href="sferatedragoitdaima.html" class="anime-card">
+        <img src="img/posters/dragonball-daima.jpg" alt="Dragon Ball Daima">
+        <p>Dragon Ball Daima</p><span>Fantazi, Luftim</span>
+      </a>
 
-  <!-- ===== FOOTER ===== -->
+      <a href="basketbollikurokos.html" class="anime-card">
+        <img src="img/posters/kuroko.jpg" alt="Kuroko's Basket">
+        <p>Kuroko's Basket</p><span>Sport, Shkollë</span>
+      </a>
+
+      <a href="haidi-vajzaealpeve.html" class="anime-card">
+        <img src="img/posters/heidi.jpg" alt="Heidi">
+        <p>Heidi – Vajza e Alpeve</p><span>Nostalgjik, Familjar</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     © 2025 <strong>Excemation Productions, LTD.</strong><br>
     Një platformë dedikuar për transmetimin e animacioneve japoneze në gjuhën shqipe.
   </footer>
 
+  <script>
+    /* ===== Search ===== */
+    const searchToggle=document.getElementById('searchToggle');
+    const searchbar=document.getElementById('searchbar');
+    const searchInput=document.getElementById('searchInput');
+    const searchGo=document.getElementById('searchGo');
+    searchToggle.addEventListener('click',()=>{
+      const open=searchbar.style.display==='block';
+      searchbar.style.display=open?'none':'block';
+      if(!open)setTimeout(()=>searchInput.focus(),10);
+    });
+    function handleSearch(){
+      const q=(searchInput.value||'').toLowerCase().trim();
+      if(!q)return;
+      if(q.includes('naruto'))location.href='naruto-2002.html';
+      else if(q.includes('piece')||q.includes('one'))location.href='piratetevegjel.html';
+      else if(q.includes('daima')||q.includes('dragon'))location.href='sferatedragoitdaima.html';
+      else if(q.includes('kuroko'))location.href='basketbollikurokos.html';
+      else if(q.includes('heidi')||q.includes('haidi'))location.href='haidi-vajzaealpeve.html';
+      else location.href='katalogu.html';
+    }
+    searchGo.addEventListener('click',handleSearch);
+    searchInput.addEventListener('keydown',e=>{if(e.key==='Enter')handleSearch();});
+
+    /* ===== Profile ===== */
+    const profileToggle=document.getElementById('profileToggle');
+    const profileDropdown=document.getElementById('profileDropdown');
+    profileToggle.addEventListener('click',()=>{
+      profileDropdown.style.display=(profileDropdown.style.display==='block')?'none':'block';
+    });
+    document.addEventListener('click',e=>{
+      if(!profileDropdown.contains(e.target)&&!profileToggle.contains(e.target)){
+        profileDropdown.style.display='none';
+      }
+    });
+  </script>
 </body>
 </html>
-
